@@ -1,0 +1,561 @@
+2020-09-18 09:14:58.616 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-18 09:14:59.194 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-18 09:14:59.201 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-18 09:14:59.213 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-18 09:14:59.217 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api
+2020-09-18 09:14:59.224 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-18 09:15:15.685 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetAllKefu
+Time:116ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","CreateTime":"2020-09-18T01:15:13.118Z","CreatorId":"string","Deleted":true,"UserId":"string","Name":"string","Openid":"string","data1":"string","data2":"string","data3":0,"data4":"string"}
+
+Response:
+
+2020-09-18 09:15:15.698 +08:00 [ERR Coldairarrow.Api.GlobalExceptionFilter] 
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Min[TSource](IEnumerable`1 source, Func`2 selector)
+   at Coldairarrow.Api.Controllers.MessageInfoController.GetAllKefu(Base_UserDecimal UserDecimal) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Controllers\Message\MessageInfoController.cs:line 379
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-09-18 09:17:22.306 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetAllKefu
+Time:12805ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","CreateTime":"2020-09-18T01:15:13.118Z","CreatorId":"string","Deleted":true,"UserId":"string","Name":"string","Openid":"string","data1":"string","data2":"string","data3":0,"data4":"string"}
+
+Response:
+
+2020-09-18 09:17:22.317 +08:00 [ERR Coldairarrow.Api.GlobalExceptionFilter] 
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Min[TSource](IEnumerable`1 source, Func`2 selector)
+   at Coldairarrow.Api.Controllers.MessageInfoController.GetAllKefu(Base_UserDecimal UserDecimal) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Controllers\Message\MessageInfoController.cs:line 379
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-09-18 09:18:55.410 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-18 09:18:55.798 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-18 09:18:55.804 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-18 09:18:55.807 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-18 09:18:55.810 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api
+2020-09-18 09:18:55.813 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-18 09:19:11.741 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[data2] = N'3'
+2020-09-18 09:19:13.580 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[data2] = N'3'
+2020-09-18 09:19:14.445 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (26ms) [Parameters=[@p10='?' (Size = 450), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Base_UserDecimal] SET [CreateTime] = @p0, [CreatorId] = @p1, [Deleted] = @p2, [Name] = @p3, [Openid] = @p4, [UserId] = @p5, [data1] = @p6, [data2] = @p7, [data3] = @p8, [data4] = @p9
+WHERE [Id] = @p10;
+SELECT @@ROWCOUNT;
+2020-09-18 09:19:17.902 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetAllKefu
+Time:12367ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","CreateTime":"2020-09-18T01:19:03.118Z","CreatorId":"string","Deleted":true,"UserId":"string","Name":"string","Openid":"string","data1":"string","data2":"string","data3":0,"data4":"string"}
+
+Response:{"Data":{"Id":"1306422215759106048","CreateTime":"2020-09-17 10:38:23.047","CreatorId":null,"Deleted":false,"UserId":null,"Name":"雪","Openid":"oMYKR4hY7NY-I2cZvZzCF9ODhg6M","data1":null,"data2":"3","data3":3,"data4":"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI732yMt3JgXiaBwU45gPLMF2qIGtBa9SkbfEgpoFT4wich0BQHjAwtBGNJXuKfTGQMEjwkDWQL4XIw/132"},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-18 10:55:41.979 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-18 10:55:42.426 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-18 10:55:42.435 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-18 10:55:42.458 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-18 10:55:42.461 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api
+2020-09-18 10:55:42.464 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-18 10:58:13.878 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (68ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-18 10:58:24.493 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-18 10:58:28.419 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:15221ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306422215759106048","SendId":"1306487931334037504","News":"string","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-18 10:58:33.822 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (21ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-18 10:58:37.787 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-18 10:58:41.044 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:7246ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306422215759106048","SendId":"1306487931334037504","News":"string","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-18 10:58:55.190 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-18 10:59:00.291 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-18 10:59:03.526 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:8340ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306422215759106048","SendId":"1306487931334037504","News":"string","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-18 10:59:24.409 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-18 11:10:45.677 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:681295ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306422215759106048","SendId":"1306487931334037504","News":"string","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:
+
+2020-09-18 11:10:45.688 +08:00 [ERR Coldairarrow.Api.GlobalExceptionFilter] 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Coldairarrow.Api.Controllers.MessageInfoController.SendMessage(Message message)
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-09-18 11:10:48.318 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-18 11:11:17.373 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-18 11:11:17.421 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:29129ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306422215759106048","SendId":"1306487931334037504","News":"string","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-18 11:11:54.212 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (5ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-18 11:12:00.394 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-18 11:12:00.467 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:6264ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306422215759106048","SendId":"1306487931334037504","News":"string","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-18 11:12:22.888 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-18 11:12:35.075 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-18 11:12:35.158 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:12274ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306422215759106048","SendId":"1306487931334037504","News":"string","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-18 14:55:45.737 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-18 14:55:47.550 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-18 14:55:47.562 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-18 14:55:47.567 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-18 14:55:47.572 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api
+2020-09-18 14:55:47.575 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-18 14:58:27.436 +08:00 [ERR Microsoft.AspNetCore.Server.Kestrel] Connection id "0HM2RJVFJIH42", Request id "0HM2RJVFJIH42:00000001": An unhandled exception was thrown by the application.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at Coldairarrow.Api.websokcets.webServise.Echo(HttpContext context, WebSocket webSocket) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\websokcets\webServise.cs:line 33
+   at Coldairarrow.Api.Startup.<Configure>b__6_0(HttpContext context, Func`1 next) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Startup.cs:line 86
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2020-09-18 14:58:28.812 +08:00 [ERR Microsoft.AspNetCore.Server.Kestrel] Connection id "0HM2RJVFJIH43", Request id "0HM2RJVFJIH43:00000001": An unhandled exception was thrown by the application.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at Coldairarrow.Api.websokcets.webServise.Echo(HttpContext context, WebSocket webSocket) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\websokcets\webServise.cs:line 33
+   at Coldairarrow.Api.Startup.<Configure>b__6_0(HttpContext context, Func`1 next) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Startup.cs:line 86
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2020-09-18 14:59:32.901 +08:00 [ERR Microsoft.AspNetCore.Server.Kestrel] Connection id "0HM2RJVFJIH4L", Request id "0HM2RJVFJIH4L:00000001": An unhandled exception was thrown by the application.
+System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+ ---> System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+   at System.Net.WebSockets.ManagedWebSocket.ThrowIfEOFUnexpected(Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken, Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   at Coldairarrow.Api.websokcets.webServise.Echo(HttpContext context, WebSocket webSocket) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\websokcets\webServise.cs:line 54
+   at Coldairarrow.Api.Startup.<Configure>b__6_0(HttpContext context, Func`1 next) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Startup.cs:line 86
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2020-09-18 14:59:32.971 +08:00 [ERR Microsoft.AspNetCore.Server.Kestrel] Connection id "0HM2RJVFJIH4K", Request id "0HM2RJVFJIH4K:00000001": An unhandled exception was thrown by the application.
+System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+ ---> Microsoft.AspNetCore.Connections.ConnectionResetException: 你的主机中的软件中止了一个已建立的连接。
+ ---> System.Net.Sockets.SocketException (10053): 你的主机中的软件中止了一个已建立的连接。
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.<GetResult>g__ThrowSocketException|7_0(SocketError e)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.GetResult()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.ProcessReceives()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.DoReceive()
+   --- End of inner exception stack trace ---
+   at System.IO.Pipelines.PipeCompletion.ThrowLatchedException()
+   at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+   at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestStream.ReadAsyncInternal(Memory`1 buffer, CancellationToken cancellationToken)
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken, Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   at Coldairarrow.Api.websokcets.webServise.Echo(HttpContext context, WebSocket webSocket) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\websokcets\webServise.cs:line 54
+   at Coldairarrow.Api.Startup.<Configure>b__6_0(HttpContext context, Func`1 next) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Startup.cs:line 86
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2020-09-18 14:59:33.189 +08:00 [ERR Microsoft.AspNetCore.Server.Kestrel] Connection id "0HM2RJVFJIH4S", Request id "0HM2RJVFJIH4S:00000001": An unhandled exception was thrown by the application.
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Coldairarrow.Api.websokcets.webServise.Echo(HttpContext context, WebSocket webSocket) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\websokcets\webServise.cs:line 40
+   at Coldairarrow.Api.Startup.<Configure>b__6_0(HttpContext context, Func`1 next) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Startup.cs:line 86
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2020-09-18 14:59:47.776 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-18 14:59:48.335 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-18 14:59:48.340 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-18 14:59:48.362 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-18 14:59:48.367 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api
+2020-09-18 14:59:48.370 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-18 15:00:32.541 +08:00 [ERR Microsoft.AspNetCore.Server.Kestrel] Connection id "0HM2RK1ND22H7", Request id "0HM2RK1ND22H7:00000001": An unhandled exception was thrown by the application.
+System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+ ---> System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+   at System.Net.WebSockets.ManagedWebSocket.ThrowIfEOFUnexpected(Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken, Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   at Coldairarrow.Api.websokcets.webServise.Echo(HttpContext context, WebSocket webSocket) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\websokcets\webServise.cs:line 54
+   at Coldairarrow.Api.Startup.<Configure>b__6_0(HttpContext context, Func`1 next) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Startup.cs:line 86
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2020-09-18 15:00:32.516 +08:00 [ERR Microsoft.AspNetCore.Server.Kestrel] Connection id "0HM2RK1ND22H6", Request id "0HM2RK1ND22H6:00000001": An unhandled exception was thrown by the application.
+System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+ ---> Microsoft.AspNetCore.Connections.ConnectionResetException: 你的主机中的软件中止了一个已建立的连接。
+ ---> System.Net.Sockets.SocketException (10053): 你的主机中的软件中止了一个已建立的连接。
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.<GetResult>g__ThrowSocketException|7_0(SocketError e)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.GetResult()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.ProcessReceives()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.DoReceive()
+   --- End of inner exception stack trace ---
+   at System.IO.Pipelines.PipeCompletion.ThrowLatchedException()
+   at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+   at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+   at System.IO.Pipelines.Pipe.DefaultPipeReader.GetResult(Int16 token)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestStream.ReadAsyncInternal(Memory`1 buffer, CancellationToken cancellationToken)
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken, Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   at Coldairarrow.Api.websokcets.webServise.Echo(HttpContext context, WebSocket webSocket) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\websokcets\webServise.cs:line 54
+   at Coldairarrow.Api.Startup.<Configure>b__6_0(HttpContext context, Func`1 next) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Startup.cs:line 86
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2020-09-18 15:00:32.541 +08:00 [ERR Microsoft.AspNetCore.Server.Kestrel] Connection id "0HM2RK1ND22H5", Request id "0HM2RK1ND22H5:00000001": An unhandled exception was thrown by the application.
+System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+ ---> System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+   at System.Net.WebSockets.ManagedWebSocket.ThrowIfEOFUnexpected(Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken, Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   at Coldairarrow.Api.websokcets.webServise.Echo(HttpContext context, WebSocket webSocket) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\websokcets\webServise.cs:line 54
+   at Coldairarrow.Api.Startup.<Configure>b__6_0(HttpContext context, Func`1 next) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Startup.cs:line 86
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2020-09-18 15:00:32.515 +08:00 [ERR Microsoft.AspNetCore.Server.Kestrel] Connection id "0HM2RK1ND22H4", Request id "0HM2RK1ND22H4:00000001": An unhandled exception was thrown by the application.
+System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+ ---> Microsoft.AspNetCore.Connections.ConnectionResetException: 你的主机中的软件中止了一个已建立的连接。
+ ---> System.Net.Sockets.SocketException (10053): 你的主机中的软件中止了一个已建立的连接。
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.<GetResult>g__ThrowSocketException|7_0(SocketError e)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.GetResult()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.ProcessReceives()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.DoReceive()
+   --- End of inner exception stack trace ---
+   at System.IO.Pipelines.PipeCompletion.ThrowLatchedException()
+   at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+   at System.IO.Pipelines.Pipe.GetReadAsyncResult()
+   at System.IO.Pipelines.Pipe.DefaultPipeReader.GetResult(Int16 token)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestStream.ReadAsyncInternal(Memory`1 buffer, CancellationToken cancellationToken)
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken, Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TWebSocketReceiveResultGetter,TWebSocketReceiveResult](Memory`1 payloadBuffer, CancellationToken cancellationToken, TWebSocketReceiveResultGetter resultGetter)
+   at Coldairarrow.Api.websokcets.webServise.Echo(HttpContext context, WebSocket webSocket) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\websokcets\webServise.cs:line 54
+   at Coldairarrow.Api.Startup.<Configure>b__6_0(HttpContext context, Func`1 next) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Startup.cs:line 86
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2020-09-18 15:06:22.617 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-18 15:06:23.075 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-18 15:06:23.082 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-18 15:06:23.085 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-18 15:06:23.088 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api
+2020-09-18 15:06:23.090 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-18 15:24:42.679 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-18 15:24:43.206 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-18 15:24:43.213 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-18 15:24:43.216 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-18 15:24:43.222 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api
+2020-09-18 15:24:43.225 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-18 15:25:03.656 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[data2] = N'3'
+2020-09-18 15:25:03.777 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[data2] = N'3'
+2020-09-18 15:25:04.124 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (52ms) [Parameters=[@p10='?' (Size = 450), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Base_UserDecimal] SET [CreateTime] = @p0, [CreatorId] = @p1, [Deleted] = @p2, [Name] = @p3, [Openid] = @p4, [UserId] = @p5, [data1] = @p6, [data2] = @p7, [data3] = @p8, [data4] = @p9
+WHERE [Id] = @p10;
+SELECT @@ROWCOUNT;
+2020-09-18 15:25:04.274 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetAllKefu
+Time:2045ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","CreateTime":"2020-09-18T07:24:55.214Z","CreatorId":"string","Deleted":true,"UserId":"","Name":"string","Openid":"string","data1":"string","data2":"string","data3":0,"data4":"string"}
+
+Response:{"Data":{"Id":"1306422215759106048","CreateTime":"2020-09-17 10:38:23.047","CreatorId":null,"Deleted":false,"UserId":null,"Name":"雪","Openid":"oMYKR4hY7NY-I2cZvZzCF9ODhg6M","data1":null,"data2":"3","data3":47,"data4":"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI732yMt3JgXiaBwU45gPLMF2qIGtBa9SkbfEgpoFT4wich0BQHjAwtBGNJXuKfTGQMEjwkDWQL4XIw/132"},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-18 15:25:11.861 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[data2] = N'3'
+2020-09-18 15:25:11.872 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[data2] = N'3'
+2020-09-18 15:25:11.900 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (21ms) [Parameters=[@p10='?' (Size = 450), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Base_UserDecimal] SET [CreateTime] = @p0, [CreatorId] = @p1, [Deleted] = @p2, [Name] = @p3, [Openid] = @p4, [UserId] = @p5, [data1] = @p6, [data2] = @p7, [data3] = @p8, [data4] = @p9
+WHERE [Id] = @p10;
+SELECT @@ROWCOUNT;
+2020-09-18 15:25:11.909 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetAllKefu
+Time:113ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","CreateTime":"2020-09-18T07:24:55.214Z","CreatorId":"string","Deleted":true,"UserId":"","Name":"string","Openid":"string","data1":"string","data2":"string","data3":0,"data4":"string"}
+
+Response:{"Data":{"Id":"1306422215759106048","CreateTime":"2020-09-17 10:38:23.047","CreatorId":null,"Deleted":false,"UserId":null,"Name":"雪","Openid":"oMYKR4hY7NY-I2cZvZzCF9ODhg6M","data1":null,"data2":"3","data3":48,"data4":"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI732yMt3JgXiaBwU45gPLMF2qIGtBa9SkbfEgpoFT4wich0BQHjAwtBGNJXuKfTGQMEjwkDWQL4XIw/132"},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-18 15:25:14.526 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[data2] = N'3'
+2020-09-18 15:25:14.582 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[data2] = N'3'
+2020-09-18 15:25:14.615 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (4ms) [Parameters=[@p10='?' (Size = 450), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Base_UserDecimal] SET [CreateTime] = @p0, [CreatorId] = @p1, [Deleted] = @p2, [Name] = @p3, [Openid] = @p4, [UserId] = @p5, [data1] = @p6, [data2] = @p7, [data3] = @p8, [data4] = @p9
+WHERE [Id] = @p10;
+SELECT @@ROWCOUNT;
+2020-09-18 15:25:14.627 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetAllKefu
+Time:116ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","CreateTime":"2020-09-18T07:24:55.214Z","CreatorId":"string","Deleted":true,"UserId":"","Name":"string","Openid":"string","data1":"string","data2":"string","data3":0,"data4":"string"}
+
+Response:{"Data":{"Id":"1306422215759106048","CreateTime":"2020-09-17 10:38:23.047","CreatorId":null,"Deleted":false,"UserId":null,"Name":"雪","Openid":"oMYKR4hY7NY-I2cZvZzCF9ODhg6M","data1":null,"data2":"3","data3":49,"data4":"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI732yMt3JgXiaBwU45gPLMF2qIGtBa9SkbfEgpoFT4wich0BQHjAwtBGNJXuKfTGQMEjwkDWQL4XIw/132"},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-18 15:25:16.465 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[data2] = N'3'
+2020-09-18 15:25:16.478 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[data2] = N'3'
+2020-09-18 15:25:16.492 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (6ms) [Parameters=[@p10='?' (Size = 450), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Base_UserDecimal] SET [CreateTime] = @p0, [CreatorId] = @p1, [Deleted] = @p2, [Name] = @p3, [Openid] = @p4, [UserId] = @p5, [data1] = @p6, [data2] = @p7, [data3] = @p8, [data4] = @p9
+WHERE [Id] = @p10;
+SELECT @@ROWCOUNT;
+2020-09-18 15:25:16.498 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetAllKefu
+Time:41ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","CreateTime":"2020-09-18T07:24:55.214Z","CreatorId":"string","Deleted":true,"UserId":"","Name":"string","Openid":"string","data1":"string","data2":"string","data3":0,"data4":"string"}
+
+Response:{"Data":{"Id":"1306422215759106048","CreateTime":"2020-09-17 10:38:23.047","CreatorId":null,"Deleted":false,"UserId":null,"Name":"雪","Openid":"oMYKR4hY7NY-I2cZvZzCF9ODhg6M","data1":null,"data2":"3","data3":50,"data4":"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI732yMt3JgXiaBwU45gPLMF2qIGtBa9SkbfEgpoFT4wich0BQHjAwtBGNJXuKfTGQMEjwkDWQL4XIw/132"},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-18 15:25:22.576 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[data2] = N'3'
+2020-09-18 15:25:22.605 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[data2] = N'3'
+2020-09-18 15:25:22.625 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (6ms) [Parameters=[@p10='?' (Size = 450), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Base_UserDecimal] SET [CreateTime] = @p0, [CreatorId] = @p1, [Deleted] = @p2, [Name] = @p3, [Openid] = @p4, [UserId] = @p5, [data1] = @p6, [data2] = @p7, [data3] = @p8, [data4] = @p9
+WHERE [Id] = @p10;
+SELECT @@ROWCOUNT;
+2020-09-18 15:25:22.818 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetAllKefu
+Time:258ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","CreateTime":"2020-09-18T07:25:21.397Z","CreatorId":"string","Deleted":true,"UserId":"string","Name":"string","Openid":"string","data1":"string","data2":"string","data3":0,"data4":"string"}
+
+Response:
+
+2020-09-18 15:25:22.825 +08:00 [ERR Coldairarrow.Api.GlobalExceptionFilter] 
+System.Collections.Generic.KeyNotFoundException: The given key 'string' was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at Coldairarrow.Api.Controllers.MessageInfoController.GetAllKefu(Base_UserDecimal UserDecimal) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Controllers\Message\MessageInfoController.cs:line 392
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-09-18 15:25:34.689 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[data2] = N'3'
+2020-09-18 15:25:34.698 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[data2] = N'3'
+2020-09-18 15:25:34.714 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (6ms) [Parameters=[@p10='?' (Size = 450), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Base_UserDecimal] SET [CreateTime] = @p0, [CreatorId] = @p1, [Deleted] = @p2, [Name] = @p3, [Openid] = @p4, [UserId] = @p5, [data1] = @p6, [data2] = @p7, [data3] = @p8, [data4] = @p9
+WHERE [Id] = @p10;
+SELECT @@ROWCOUNT;
+2020-09-18 15:25:34.723 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetAllKefu
+Time:62ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","CreateTime":"2020-09-18T07:25:21.397Z","CreatorId":"string","Deleted":true,"UserId":"","Name":"string","Openid":"string","data1":"string","data2":"string","data3":0,"data4":"string"}
+
+Response:{"Data":{"Id":"1306422215759106048","CreateTime":"2020-09-17 10:38:23.047","CreatorId":null,"Deleted":false,"UserId":null,"Name":"雪","Openid":"oMYKR4hY7NY-I2cZvZzCF9ODhg6M","data1":null,"data2":"3","data3":52,"data4":"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI732yMt3JgXiaBwU45gPLMF2qIGtBa9SkbfEgpoFT4wich0BQHjAwtBGNJXuKfTGQMEjwkDWQL4XIw/132"},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-18 15:26:10.366 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[data2] = N'3'
+2020-09-18 15:26:10.384 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[data2] = N'3'
+2020-09-18 15:26:10.401 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (6ms) [Parameters=[@p10='?' (Size = 450), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Base_UserDecimal] SET [CreateTime] = @p0, [CreatorId] = @p1, [Deleted] = @p2, [Name] = @p3, [Openid] = @p4, [UserId] = @p5, [data1] = @p6, [data2] = @p7, [data3] = @p8, [data4] = @p9
+WHERE [Id] = @p10;
+SELECT @@ROWCOUNT;
+2020-09-18 15:26:10.416 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetAllKefu
+Time:94ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","CreateTime":"2020-09-18T07:25:21.397Z","CreatorId":"string","Deleted":true,"UserId":"","Name":"string","Openid":"string","data1":"string","data2":"string","data3":0,"data4":"string"}
+
+Response:{"Data":{"Id":"1306422215759106048","CreateTime":"2020-09-17 10:38:23.047","CreatorId":null,"Deleted":false,"UserId":null,"Name":"雪","Openid":"oMYKR4hY7NY-I2cZvZzCF9ODhg6M","data1":null,"data2":"3","data3":53,"data4":"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI732yMt3JgXiaBwU45gPLMF2qIGtBa9SkbfEgpoFT4wich0BQHjAwtBGNJXuKfTGQMEjwkDWQL4XIw/132"},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-18 15:28:31.488 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (4ms) [Parameters=[@__s_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Openid] = @__s_0
+2020-09-18 15:28:32.165 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/UserDecilmal/Base_UserDecimal/wxlogins
+Time:1527ms
+Method:POST
+ContentType:application/json
+Body:{"code":"051auV0w3iDtZU24SZ3w3Mb76D1auV0H","Img":"string","NickName":"string"}
+
+Response:{"Data":{"Id":"1306422215759106048","CreateTime":"2020-09-17 10:38:23.047","CreatorId":null,"Deleted":false,"UserId":null,"Name":"雪","Openid":"oMYKR4hY7NY-I2cZvZzCF9ODhg6M","data1":null,"data2":"3","data3":54,"data4":"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI732yMt3JgXiaBwU45gPLMF2qIGtBa9SkbfEgpoFT4wich0BQHjAwtBGNJXuKfTGQMEjwkDWQL4XIw/132"},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-18 16:10:40.839 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-18 16:10:41.427 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-18 16:10:41.431 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-18 16:10:41.434 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-18 16:10:41.438 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api
+2020-09-18 16:10:41.444 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-18 16:23:38.749 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (139ms) [Parameters=[@__s_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Openid] = @__s_0
+2020-09-18 16:23:39.324 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/UserDecilmal/Base_UserDecimal/wxlogins
+Time:739687ms
+Method:POST
+ContentType:application/json
+Body:{"code":"051avlGa1sRLEz0duQHa16n7AU2avlGK","Img":"string","NickName":"string"}
+
+Response:{"Data":{"Id":"1306422215759106048","CreateTime":"2020-09-17 10:38:23.047","CreatorId":null,"Deleted":false,"UserId":null,"Name":"雪","Openid":"oMYKR4hY7NY-I2cZvZzCF9ODhg6M","data1":null,"data2":"3","data3":54,"data4":"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI732yMt3JgXiaBwU45gPLMF2qIGtBa9SkbfEgpoFT4wich0BQHjAwtBGNJXuKfTGQMEjwkDWQL4XIw/132"},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-18 16:25:24.724 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Openid] IS NULL
+2020-09-18 16:25:24.732 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/UserDecilmal/Base_UserDecimal/wxlogins
+Time:11421ms
+Method:POST
+ContentType:application/json
+Body:{"code":"051avlGa1sRLEz0duQHa16n7AU2avlGK","Img":"string","NickName":"string"}
+
+Response:{"Data":{"Id":"1306867163562250240","CreateTime":"2020-09-18 16:06:26.870","CreatorId":null,"Deleted":false,"UserId":null,"Name":"丁龙","Openid":null,"data1":null,"data2":"2","data3":0,"data4":"https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83erjpcukGhyeHrgNaYq9nGIcHeG3w3FUkJticurGdJfDbm7kdGqonSaptMvHYoYcqctSOs3m8T3LBAw/132"},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+

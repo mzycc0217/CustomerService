@@ -1,0 +1,452 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Coldairarrow.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Coldairarrow.Api.BaseActionFilterAsync.JsonContent(System.String)">
+            <summary>
+            返回JSON
+            </summary>
+            <param name="json">json字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseActionFilterAsync.Success">
+            <summary>
+            返回成功
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseActionFilterAsync.Success(System.String)">
+            <summary>
+            返回成功
+            </summary>
+            <param name="msg">消息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseActionFilterAsync.Success``1(``0)">
+            <summary>
+            返回成功
+            </summary>
+            <param name="data">返回的数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseActionFilterAsync.Error">
+            <summary>
+            返回错误
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseActionFilterAsync.Error(System.String)">
+            <summary>
+            返回错误
+            </summary>
+            <param name="msg">错误提示</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseActionFilterAsync.Error(System.String,System.Int32)">
+            <summary>
+            返回错误
+            </summary>
+            <param name="msg">错误提示</param>
+            <param name="errorCode">错误代码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Coldairarrow.Api.CheckJWTAttribute">
+            <summary>
+            JWT校验
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Api.NoCheckJWTAttribute">
+            <summary>
+            忽略JWT校验
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Api.CheckSignAttribute">
+            <summary>
+            校验签名、十分严格
+            防抵赖、防伪造、防重复调用
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.CheckSignAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="T:Coldairarrow.Api.IgnoreSignAttribute">
+            <summary>
+            忽略接口签名校验
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Api.ApiPermissionAttribute">
+            <summary>
+            接口权限校验
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.ApiPermissionAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="context">过滤器上下文</param>
+        </member>
+        <member name="T:Coldairarrow.Api.NoApiPermissionAttribute">
+            <summary>
+            忽略接口权限校验
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Api.FormatResponseAttribute">
+            <summary>
+            若Action返回对象为自定义对象,则将其转为JSON
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Api.NoFormatResponseAttribute">
+            <summary>
+            返回结果不进行格式化
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.NoFormatResponseAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Action执行之前执行
+            </summary>
+            <param name="context">过滤器上下文</param>
+        </member>
+        <member name="M:Coldairarrow.Api.NoFormatResponseAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            Action执行完毕之后执行
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Coldairarrow.Api.CorsMiddleware">
+            <summary>
+            跨域中间件
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.CorsMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            管道执行到该中间件时候下一个中间件的RequestDelegate请求委托，如果有其它参数，也同样通过注入的方式获得
+            </summary>
+            <param name="next">下一个处理者</param>
+        </member>
+        <member name="M:Coldairarrow.Api.CorsMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            自定义中间件要执行的逻辑
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Coldairarrow.Api.BaseApiController">
+            <summary>
+            Mvc对外接口基控制器
+            </summary>
+        </member>
+        <member name="T:Coldairarrow.Api.BaseController">
+            <summary>
+            基控制器
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseController.JsonContent(System.String)">
+            <summary>
+            返回JSON
+            </summary>
+            <param name="jsonStr">json字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseController.HtmlContent(System.String)">
+            <summary>
+            返回html
+            </summary>
+            <param name="body">html内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseController.Success">
+            <summary>
+            返回成功
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseController.Success``1(``0)">
+            <summary>
+            返回成功
+            </summary>
+            <param name="data">返回数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseController.Success``1(``0,System.String)">
+            <summary>
+            返回成功
+            </summary>
+            <param name="data">返回数据</param>
+            <param name="msg">返回消息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseController.Error">
+            <summary>
+            返回错误
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.BaseController.Error(System.String)">
+            <summary>
+            返回错误
+            </summary>
+            <param name="msg">错误提示</param>
+            <returns></returns>
+        </member>
+        <member name="T:Coldairarrow.Api.Controllers.Base_Manage.Base_ActionController">
+            <summary>
+            系统权限
+            </summary>
+            <seealso cref="T:Coldairarrow.Api.BaseApiController" />
+        </member>
+        <member name="T:Coldairarrow.Api.Controllers.Base_Manage.Base_AppSecretController">
+            <summary>
+            应用密钥
+            </summary>
+            <seealso cref="T:Coldairarrow.Api.BaseApiController" />
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_AppSecretController.SaveData(Coldairarrow.Entity.Base_Manage.Base_AppSecret)">
+            <summary>
+            保存
+            </summary>
+            <param name="theData">保存的数据</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_AppSecretController.DeleteData(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除数据
+            </summary>
+            <param name="ids">id数组,JSON数组</param>
+        </member>
+        <member name="T:Coldairarrow.Api.Controllers.Base_Manage.Base_DbLinkController">
+            <summary>
+            应用密钥
+            </summary>
+            <seealso cref="T:Coldairarrow.Api.BaseApiController" />
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_DbLinkController.SaveData(Coldairarrow.Entity.Base_Manage.Base_DbLink)">
+            <summary>
+            保存
+            </summary>
+            <param name="theData">保存的数据</param>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.Base_DbLinkController.DeleteData(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除数据
+            </summary>
+            <param name="ids">id数组,JSON数组</param>
+        </member>
+        <member name="T:Coldairarrow.Api.Controllers.Base_Manage.Base_RoleController">
+            <summary>
+            应用密钥
+            </summary>
+            <seealso cref="T:Coldairarrow.Api.BaseApiController" />
+        </member>
+        <member name="T:Coldairarrow.Api.Controllers.Base_Manage.HomeController">
+            <summary>
+            首页控制器
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_Manage.HomeController.SubmitLogin(Coldairarrow.Business.Base_Manage.LoginInputDTO)">
+            <summary>
+            用户登录(获取token)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.ExpressionController.GetAllListAsync(Coldairarrow.Entity.Expression)">
+            <summary>
+            获取所有表情
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Menu_ServiseController.GetMenuData(Coldairarrow.Entity.ServiceTel)">
+            <summary>
+            获取菜单
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Menu_ServiseController.SetKefu(Coldairarrow.Entity.Menu_Servise)">
+            <summary>
+            设置客服
+            </summary>
+            <param name="menu_Servise"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.MessageInfoController.SendMessage(Coldairarrow.Api.Dto.Message)">
+            <summary>
+            发送消息
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.MessageInfoController.GetUsersd(Coldairarrow.Entity.Base_UserDecimal)">
+            <summary>
+            查询还有没有客服//如果有客服则返回客服ID//如果没有则返回字符串文字
+            </summary>
+            <param name="UserDecimal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.MessageInfoController.GetAllKefu(Coldairarrow.Entity.Base_UserDecimal)">
+            <summary>
+            获取客服
+            </summary>
+            <param name="UserDecimal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.MessageInfoController.BackLine(Coldairarrow.Api.Dto.RemoveId)">
+            <summary>
+            客服断开连接
+            </summary>
+            <param name="remove"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.MessageInfoController.GetMessage(Coldairarrow.Api.Dto.Message)">
+            <summary>
+            客服获取历史消息 获取未处理的消息（p.Data1=1）
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.MessageInfoController.GetUserMessage(Coldairarrow.Api.Dto.Message)">
+            <summary>
+            客户获取历史消息(sendId)
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.MessageInfoController.SetMessage(Coldairarrow.Api.Dto.Message)">
+            <summary>
+            撤回
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.MessageInfoController.GetUser">
+            <summary>
+            获取在线客户(用不到)
+            </summary>
+            <param></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.MessageInfoController.GetUserCustom">
+            <summary>
+            获取在线客服(用不到)
+            </summary>
+            <param></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.MessageInfoController.RemoveUser(Coldairarrow.Entity.Base_UserDecimal)">
+            <summary>
+            移除(关闭连接对方的连接)
+            </summary>
+            <param></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.MessageInfoController.SeteMessage(System.Collections.Generic.List{System.String})">
+            <summary>
+            设置为已读
+            </summary>
+            <param></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.MessageInfoController.CloseUser(Coldairarrow.Entity.Base_UserDecimal)">
+            <summary>
+            优雅websocket关闭连接(自身的)
+            </summary>
+            <param></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_UserDecimalController.wxlogins(Coldairarrow.Api.Dto.Login)">
+            <summary>
+            微信登录
+            </summary>
+            <param name="login"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_UserDecimalController.Client_Post(System.String)">
+            <summary>
+            获取用户信息
+            </summary>
+            <param name="requestUri"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.Controllers.Base_UserDecimalController.GetUsers(System.String)">
+            <summary>
+            获取用户信息(access_token)
+            </summary>
+            <param name="openid"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.Demolist.Id">
+            <summary>
+            客服Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.Demolist.Count">
+            <summary>
+            客户数量
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.Demolist.Name">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.Message.ReceiveId">
+            <summary>
+            接收者Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.Message.state">
+            <summary>
+            消息状态
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.Message.states">
+            <summary>
+            消息状态(已经发送，未接受到)
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.Message.Kefu">
+            <summary>
+            是否是客服
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.Message.base_UserDecimals">
+            <summary>
+            不用管
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.Message.PageIndex">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.Message.PageRow">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.Api.websokcets.webServise.Echo(Microsoft.AspNetCore.Http.HttpContext,System.Net.WebSockets.WebSocket)">
+            <summary>
+            收发类
+            </summary>
+            <param name="context"></param>
+            <param name="webSocket"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.websokcets.webServise.DetectionAsync">
+            <summary>
+            删除没有存活的检测
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.websokcets.webServise.AddUser(Microsoft.AspNetCore.Http.HttpContext,System.Net.WebSockets.WebSocket)">
+            <summary>
+            添加人
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

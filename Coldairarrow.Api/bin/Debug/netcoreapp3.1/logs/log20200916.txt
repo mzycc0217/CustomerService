@@ -1,0 +1,1107 @@
+2020-09-16 18:10:23.447 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-16 18:10:24.743 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-16 18:10:24.788 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-16 18:10:24.791 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-16 18:10:24.794 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api
+2020-09-16 18:10:24.797 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-16 18:24:59.875 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (70ms) [Parameters=[@__input_userName_0='?' (Size = 4000), @__input_password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Birthday], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[DepartmentId], [b].[Password], [b].[RealName], [b].[Sex], [b].[UserName]
+FROM [Base_User] AS [b]
+WHERE ([b].[UserName] = @__input_userName_0) AND ([b].[Password] = @__input_password_1)
+2020-09-16 18:25:00.021 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Home/SubmitLogin
+Time:1384ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"userName":"Admin","password":"123456"}
+
+Response:{"Data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiJBZG1pbiIsIkV4cGlyZSI6IjIwMjAtMDktMTcgMTg6MjQ6NTkuOTM2In0.N_PJsmjciP1bO71-hQMo8re_he-sVp_gDPNOFg71w40","Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:25:00.959 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (4ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-16 18:25:02.121 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (5ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-16 18:25:02.197 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-16 18:25:02.219 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-16 18:25:02.229 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-16 18:25:02.239 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-16 18:25:02.249 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id]
+FROM [Base_Action] AS [b]
+2020-09-16 18:25:02.293 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[Type] IN (2) AND [b].[Id] IN (N'1178957405992521728', N'1178957553778823168', N'1179018395304071168', N'1182652266117599232', N'1182652367447789568', N'1182652433302556672', N'1188801057778569216', N'1188801057778569217', N'1188801057778569218', N'1188801109783744512', N'1188801109783744513', N'1188801109783744514', N'1188801273885888512', N'1188801273885888513', N'1188801273885888514', N'1188801341661646848', N'1188801341661646849', N'1188801341661646850', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1193527101521661952', N'1193527101521661953', N'1193527101521661954', N'1248570020770877440')
+ORDER BY [b].[Sort]
+2020-09-16 18:25:02.313 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Home/GetOperatorInfo
+Time:2165ms
+Method:POST
+ContentType:null
+Body:
+
+Response:{"Data":{"UserInfo":{"Id":"Admin","CreateTime":"2019-09-13 21:10:03.000","CreatorId":"Admin","Deleted":false,"UserName":"Admin","Password":"e10adc3949ba59abbe56e057f20f883e","RealName":"超级管理员","Sex":1,"Birthday":"2019-09-13 00:00:00.000","DepartmentId":"1181175685528424448","RoleNames":"超级管理员","RoleIdList":["1251144116734005248"],"RoleNameList":["超级管理员"],"RoleType":1,"DepartmentName":"宁波分公司","SexText":"男人","BirthdayText":"2019-09-13"},"Permissions":["Base_Role.Add","Base_Role.Edit","Base_Role.Delete","Base_Department.Add","Base_Department.Edit","Base_Department.Delete","Base_AppSecret.Add","Base_AppSecret.Edit","Base_AppSecret.Delete","Base_Action.Add","Base_Action.Edit","Base_Action.Delete","Base_User.Add","Base_User.Edit","Base_User.Delete"]},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:25:02.382 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-16 18:25:02.389 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-16 18:25:02.394 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-16 18:25:02.401 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id]
+FROM [Base_Action] AS [b]
+2020-09-16 18:25:02.410 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[Type] IN (0, 1) AND [b].[Id] IN (N'1178957405992521728', N'1178957553778823168', N'1179018395304071168', N'1182652266117599232', N'1182652367447789568', N'1182652433302556672', N'1188801057778569216', N'1188801057778569217', N'1188801057778569218', N'1188801109783744512', N'1188801109783744513', N'1188801109783744514', N'1188801273885888512', N'1188801273885888513', N'1188801273885888514', N'1188801341661646848', N'1188801341661646849', N'1188801341661646850', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1193527101521661952', N'1193527101521661953', N'1193527101521661954', N'1248570020770877440')
+ORDER BY [b].[Sort]
+2020-09-16 18:25:02.433 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[ParentId] IN (N'1182652266117599232', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1178957405992521728', N'1182652367447789568', N'1182652433302556672', N'1179018395304071168', N'1178957553778823168', N'1248570020770877440') AND ([b].[Type] = 2)
+2020-09-16 18:25:02.456 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Home/GetOperatorMenuList
+Time:77ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Type":0,"Url":null,"path":null,"NeedAction":true,"TypeText":"菜单","NeedActionText":"是","children":[{"Type":1,"Url":"/Home/Introduce","path":"/Home/Introduce","NeedAction":false,"TypeText":"页面","NeedActionText":"否","children":null,"title":"框架介绍","value":"1193158630615027712","key":"1193158630615027712","selectable":false,"icon":null,"Sort":0,"PermissionValues":[],"Id":"1193158630615027712","Value":"1193158630615027712","ParentId":"1193158266167758848","Level":2,"Text":"框架介绍","Children":null},{"Type":1,"Url":"/Home/Statis","path":"/Home/Statis","NeedAction":false,"TypeText":"页面","NeedActionText":"否","children":null,"title":"运营统计","value":"1193158780011941888","key":"1193158780011941888","selectable":false,"icon":null,"Sort":0,"PermissionValues":[],"Id":"1193158780011941888","Value":"1193158780011941888","ParentId":"1193158266167758848","Level":2,"Text":"运营统计","Children":null}],"title":"首页","value":"1193158266167758848","key":"1193158266167758848","selectable":false,"icon":"home......
+
+2020-09-16 18:25:05.935 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:25:05.949 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetAllDbLink
+Time:41ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=.;Initial Catalog=Colder.Admin.AntdVue;Integrated Security=True","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:25:06.019 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:25:15.405 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:25:15.425 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+ORDER BY [b].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2020-09-16 18:25:15.434 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Base_DbLink/GetDataList
+Time:42ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"PageIndex":1,"PageRows":10,"SortField":"Id","SortType":"asc"}
+
+Response:{"Total":1,"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=.;Initial Catalog=Colder.Admin.AntdVue;Integrated Security=True","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":null}
+
+2020-09-16 18:25:19.431 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__p_0
+2020-09-16 18:25:19.577 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Base_DbLink/GetTheData
+Time:183ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"id":"1183373232498020352"}
+
+Response:{"Data":{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=.;Initial Catalog=Colder.Admin.AntdVue;Integrated Security=True","DbType":"SqlServer"},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:25:46.483 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetDbTableList
+Time:40473ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"linkId":"1183373232498020352"}
+
+Response:
+
+2020-09-16 18:25:46.492 +08:00 [ERR Coldairarrow.Api.GlobalExceptionFilter] 
+System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): 系统找不到指定的文件。
+   at Castle.DynamicProxy.AsyncInterceptorBase.InterceptSynchronousResult[TResult](AsyncInterceptorBase me, IInvocation invocation)
+   at Castle.DynamicProxy.AsyncInterceptorBase.Castle.DynamicProxy.IAsyncInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IBuildCodeBusinessProxy.GetDbTableList(String linkId)
+   at Coldairarrow.Api.Controllers.Base_Manage.BuildCodeController.GetDbTableList(DbTablesInputDTO input) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Controllers\Base_Manage\BuildCodeController.cs:line 32
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2020-09-16 18:25:52.348 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (37ms) [Parameters=[@p6='?' (Size = 450), @p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Base_DbLink] SET [ConnectionStr] = @p0, [CreateTime] = @p1, [CreatorId] = @p2, [DbType] = @p3, [Deleted] = @p4, [LinkName] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;
+2020-09-16 18:25:52.390 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Base_DbLink/SaveData
+Time:199ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:25:52.469 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:25:52.476 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+ORDER BY [b].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2020-09-16 18:25:52.483 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Base_DbLink/GetDataList
+Time:16ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"PageIndex":1,"PageRows":10,"SortField":"Id","SortType":"asc"}
+
+Response:{"Total":1,"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":null}
+
+2020-09-16 18:25:56.477 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:25:56.485 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetAllDbLink
+Time:9ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:25:56.547 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:26:18.902 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-16 18:26:19.544 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-16 18:26:19.550 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-16 18:26:19.554 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-16 18:26:19.558 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api
+2020-09-16 18:26:19.561 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-16 18:26:34.852 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (73ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-16 18:26:35.251 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (5ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-16 18:26:35.324 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-16 18:26:35.350 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-16 18:26:35.356 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-16 18:26:35.363 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-16 18:26:35.379 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id]
+FROM [Base_Action] AS [b]
+2020-09-16 18:26:35.469 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[Type] IN (2) AND [b].[Id] IN (N'1178957405992521728', N'1178957553778823168', N'1179018395304071168', N'1182652266117599232', N'1182652367447789568', N'1182652433302556672', N'1188801057778569216', N'1188801057778569217', N'1188801057778569218', N'1188801109783744512', N'1188801109783744513', N'1188801109783744514', N'1188801273885888512', N'1188801273885888513', N'1188801273885888514', N'1188801341661646848', N'1188801341661646849', N'1188801341661646850', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1193527101521661952', N'1193527101521661953', N'1193527101521661954', N'1248570020770877440')
+ORDER BY [b].[Sort]
+2020-09-16 18:26:35.534 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Home/GetOperatorInfo
+Time:1561ms
+Method:POST
+ContentType:null
+Body:
+
+Response:{"Data":{"UserInfo":{"Id":"Admin","CreateTime":"2019-09-13 21:10:03.000","CreatorId":"Admin","Deleted":false,"UserName":"Admin","Password":"e10adc3949ba59abbe56e057f20f883e","RealName":"超级管理员","Sex":1,"Birthday":"2019-09-13 00:00:00.000","DepartmentId":"1181175685528424448","RoleNames":"超级管理员","RoleIdList":["1251144116734005248"],"RoleNameList":["超级管理员"],"RoleType":1,"DepartmentName":"宁波分公司","SexText":"男人","BirthdayText":"2019-09-13"},"Permissions":["Base_Role.Add","Base_Role.Edit","Base_Role.Delete","Base_Department.Add","Base_Department.Edit","Base_Department.Delete","Base_AppSecret.Add","Base_AppSecret.Edit","Base_AppSecret.Delete","Base_Action.Add","Base_Action.Edit","Base_Action.Delete","Base_User.Add","Base_User.Edit","Base_User.Delete"]},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:26:35.601 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (5ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-16 18:26:35.609 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-16 18:26:35.617 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-16 18:26:35.622 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id]
+FROM [Base_Action] AS [b]
+2020-09-16 18:26:35.630 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[Type] IN (0, 1) AND [b].[Id] IN (N'1178957405992521728', N'1178957553778823168', N'1179018395304071168', N'1182652266117599232', N'1182652367447789568', N'1182652433302556672', N'1188801057778569216', N'1188801057778569217', N'1188801057778569218', N'1188801109783744512', N'1188801109783744513', N'1188801109783744514', N'1188801273885888512', N'1188801273885888513', N'1188801273885888514', N'1188801341661646848', N'1188801341661646849', N'1188801341661646850', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1193527101521661952', N'1193527101521661953', N'1193527101521661954', N'1248570020770877440')
+ORDER BY [b].[Sort]
+2020-09-16 18:26:35.654 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[ParentId] IN (N'1182652266117599232', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1178957405992521728', N'1182652367447789568', N'1182652433302556672', N'1179018395304071168', N'1178957553778823168', N'1248570020770877440') AND ([b].[Type] = 2)
+2020-09-16 18:26:35.686 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Home/GetOperatorMenuList
+Time:95ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Type":0,"Url":null,"path":null,"NeedAction":true,"TypeText":"菜单","NeedActionText":"是","children":[{"Type":1,"Url":"/Home/Introduce","path":"/Home/Introduce","NeedAction":false,"TypeText":"页面","NeedActionText":"否","children":null,"title":"框架介绍","value":"1193158630615027712","key":"1193158630615027712","selectable":false,"icon":null,"Sort":0,"PermissionValues":[],"Id":"1193158630615027712","Value":"1193158630615027712","ParentId":"1193158266167758848","Level":2,"Text":"框架介绍","Children":null},{"Type":1,"Url":"/Home/Statis","path":"/Home/Statis","NeedAction":false,"TypeText":"页面","NeedActionText":"否","children":null,"title":"运营统计","value":"1193158780011941888","key":"1193158780011941888","selectable":false,"icon":null,"Sort":0,"PermissionValues":[],"Id":"1193158780011941888","Value":"1193158780011941888","ParentId":"1193158266167758848","Level":2,"Text":"运营统计","Children":null}],"title":"首页","value":"1193158266167758848","key":"1193158266167758848","selectable":false,"icon":"home......
+
+2020-09-16 18:26:39.369 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:26:39.384 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetAllDbLink
+Time:40ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:26:39.519 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:26:57.784 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetDbTableList
+Time:18279ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"linkId":"1183373232498020352"}
+
+Response:
+
+2020-09-16 18:26:57.793 +08:00 [ERR Coldairarrow.Api.GlobalExceptionFilter] 
+System.InvalidOperationException: Instance failure.
+   at Castle.DynamicProxy.AsyncInterceptorBase.InterceptSynchronousResult[TResult](AsyncInterceptorBase me, IInvocation invocation)
+   at Castle.DynamicProxy.AsyncInterceptorBase.Castle.DynamicProxy.IAsyncInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IBuildCodeBusinessProxy.GetDbTableList(String linkId)
+   at Coldairarrow.Api.Controllers.Base_Manage.BuildCodeController.GetDbTableList(DbTablesInputDTO input) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Controllers\Base_Manage\BuildCodeController.cs:line 32
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-09-16 18:27:01.047 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:27:01.066 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+ORDER BY [b].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2020-09-16 18:27:01.075 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Base_DbLink/GetDataList
+Time:39ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"PageIndex":1,"PageRows":10,"SortField":"Id","SortType":"asc"}
+
+Response:{"Total":1,"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":null}
+
+2020-09-16 18:27:22.871 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-16 18:27:22.878 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-16 18:27:22.890 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-16 18:27:22.897 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-16 18:27:22.903 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-16 18:27:22.913 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-16 18:27:22.926 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id]
+FROM [Base_Action] AS [b]
+2020-09-16 18:27:22.934 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[Type] IN (2) AND [b].[Id] IN (N'1178957405992521728', N'1178957553778823168', N'1179018395304071168', N'1182652266117599232', N'1182652367447789568', N'1182652433302556672', N'1188801057778569216', N'1188801057778569217', N'1188801057778569218', N'1188801109783744512', N'1188801109783744513', N'1188801109783744514', N'1188801273885888512', N'1188801273885888513', N'1188801273885888514', N'1188801341661646848', N'1188801341661646849', N'1188801341661646850', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1193527101521661952', N'1193527101521661953', N'1193527101521661954', N'1248570020770877440')
+ORDER BY [b].[Sort]
+2020-09-16 18:27:22.956 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Home/GetOperatorInfo
+Time:90ms
+Method:POST
+ContentType:null
+Body:
+
+Response:{"Data":{"UserInfo":{"Id":"Admin","CreateTime":"2019-09-13 21:10:03.000","CreatorId":"Admin","Deleted":false,"UserName":"Admin","Password":"e10adc3949ba59abbe56e057f20f883e","RealName":"超级管理员","Sex":1,"Birthday":"2019-09-13 00:00:00.000","DepartmentId":"1181175685528424448","RoleNames":"超级管理员","RoleIdList":["1251144116734005248"],"RoleNameList":["超级管理员"],"RoleType":1,"DepartmentName":"宁波分公司","SexText":"男人","BirthdayText":"2019-09-13"},"Permissions":["Base_Role.Add","Base_Role.Edit","Base_Role.Delete","Base_Department.Add","Base_Department.Edit","Base_Department.Delete","Base_AppSecret.Add","Base_AppSecret.Edit","Base_AppSecret.Delete","Base_Action.Add","Base_Action.Edit","Base_Action.Delete","Base_User.Add","Base_User.Edit","Base_User.Delete"]},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:27:23.098 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (36ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-16 18:27:23.108 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-16 18:27:23.116 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-16 18:27:23.125 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id]
+FROM [Base_Action] AS [b]
+2020-09-16 18:27:23.136 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[Type] IN (0, 1) AND [b].[Id] IN (N'1178957405992521728', N'1178957553778823168', N'1179018395304071168', N'1182652266117599232', N'1182652367447789568', N'1182652433302556672', N'1188801057778569216', N'1188801057778569217', N'1188801057778569218', N'1188801109783744512', N'1188801109783744513', N'1188801109783744514', N'1188801273885888512', N'1188801273885888513', N'1188801273885888514', N'1188801341661646848', N'1188801341661646849', N'1188801341661646850', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1193527101521661952', N'1193527101521661953', N'1193527101521661954', N'1248570020770877440')
+ORDER BY [b].[Sort]
+2020-09-16 18:27:23.148 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[ParentId] IN (N'1182652266117599232', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1178957405992521728', N'1182652367447789568', N'1182652433302556672', N'1179018395304071168', N'1178957553778823168', N'1248570020770877440') AND ([b].[Type] = 2)
+2020-09-16 18:27:23.154 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Home/GetOperatorMenuList
+Time:94ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Type":0,"Url":null,"path":null,"NeedAction":true,"TypeText":"菜单","NeedActionText":"是","children":[{"Type":1,"Url":"/Home/Introduce","path":"/Home/Introduce","NeedAction":false,"TypeText":"页面","NeedActionText":"否","children":null,"title":"框架介绍","value":"1193158630615027712","key":"1193158630615027712","selectable":false,"icon":null,"Sort":0,"PermissionValues":[],"Id":"1193158630615027712","Value":"1193158630615027712","ParentId":"1193158266167758848","Level":2,"Text":"框架介绍","Children":null},{"Type":1,"Url":"/Home/Statis","path":"/Home/Statis","NeedAction":false,"TypeText":"页面","NeedActionText":"否","children":null,"title":"运营统计","value":"1193158780011941888","key":"1193158780011941888","selectable":false,"icon":null,"Sort":0,"PermissionValues":[],"Id":"1193158780011941888","Value":"1193158780011941888","ParentId":"1193158266167758848","Level":2,"Text":"运营统计","Children":null}],"title":"首页","value":"1193158266167758848","key":"1193158266167758848","selectable":false,"icon":"home......
+
+2020-09-16 18:27:23.505 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:27:23.519 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+ORDER BY [b].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2020-09-16 18:27:23.532 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Base_DbLink/GetDataList
+Time:46ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"PageIndex":1,"PageRows":10,"SortField":"Id","SortType":"asc"}
+
+Response:{"Total":1,"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":null}
+
+2020-09-16 18:27:25.191 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:27:25.204 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetAllDbLink
+Time:15ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:27:25.283 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (3ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:29:12.291 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-16 18:29:12.707 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-16 18:29:12.719 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-16 18:29:12.728 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-16 18:29:12.739 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api
+2020-09-16 18:29:12.764 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-16 18:29:23.239 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (64ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-16 18:29:23.625 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (5ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-16 18:29:23.696 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-16 18:29:23.716 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-16 18:29:23.723 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-16 18:29:23.729 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-16 18:29:23.744 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id]
+FROM [Base_Action] AS [b]
+2020-09-16 18:29:23.834 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[Type] IN (2) AND [b].[Id] IN (N'1178957405992521728', N'1178957553778823168', N'1179018395304071168', N'1182652266117599232', N'1182652367447789568', N'1182652433302556672', N'1188801057778569216', N'1188801057778569217', N'1188801057778569218', N'1188801109783744512', N'1188801109783744513', N'1188801109783744514', N'1188801273885888512', N'1188801273885888513', N'1188801273885888514', N'1188801341661646848', N'1188801341661646849', N'1188801341661646850', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1193527101521661952', N'1193527101521661953', N'1193527101521661954', N'1248570020770877440')
+ORDER BY [b].[Sort]
+2020-09-16 18:29:23.868 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Home/GetOperatorInfo
+Time:1392ms
+Method:POST
+ContentType:null
+Body:
+
+Response:{"Data":{"UserInfo":{"Id":"Admin","CreateTime":"2019-09-13 21:10:03.000","CreatorId":"Admin","Deleted":false,"UserName":"Admin","Password":"e10adc3949ba59abbe56e057f20f883e","RealName":"超级管理员","Sex":1,"Birthday":"2019-09-13 00:00:00.000","DepartmentId":"1181175685528424448","RoleNames":"超级管理员","RoleIdList":["1251144116734005248"],"RoleNameList":["超级管理员"],"RoleType":1,"DepartmentName":"宁波分公司","SexText":"男人","BirthdayText":"2019-09-13"},"Permissions":["Base_Role.Add","Base_Role.Edit","Base_Role.Delete","Base_Department.Add","Base_Department.Edit","Base_Department.Delete","Base_AppSecret.Add","Base_AppSecret.Edit","Base_AppSecret.Delete","Base_Action.Add","Base_Action.Edit","Base_Action.Delete","Base_User.Add","Base_User.Edit","Base_User.Delete"]},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:29:23.910 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-16 18:29:23.917 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-16 18:29:23.922 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-16 18:29:23.927 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id]
+FROM [Base_Action] AS [b]
+2020-09-16 18:29:23.936 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[Type] IN (0, 1) AND [b].[Id] IN (N'1178957405992521728', N'1178957553778823168', N'1179018395304071168', N'1182652266117599232', N'1182652367447789568', N'1182652433302556672', N'1188801057778569216', N'1188801057778569217', N'1188801057778569218', N'1188801109783744512', N'1188801109783744513', N'1188801109783744514', N'1188801273885888512', N'1188801273885888513', N'1188801273885888514', N'1188801341661646848', N'1188801341661646849', N'1188801341661646850', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1193527101521661952', N'1193527101521661953', N'1193527101521661954', N'1248570020770877440')
+ORDER BY [b].[Sort]
+2020-09-16 18:29:23.954 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[ParentId] IN (N'1182652266117599232', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1178957405992521728', N'1182652367447789568', N'1182652433302556672', N'1179018395304071168', N'1178957553778823168', N'1248570020770877440') AND ([b].[Type] = 2)
+2020-09-16 18:29:23.988 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Home/GetOperatorMenuList
+Time:80ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Type":0,"Url":null,"path":null,"NeedAction":true,"TypeText":"菜单","NeedActionText":"是","children":[{"Type":1,"Url":"/Home/Introduce","path":"/Home/Introduce","NeedAction":false,"TypeText":"页面","NeedActionText":"否","children":null,"title":"框架介绍","value":"1193158630615027712","key":"1193158630615027712","selectable":false,"icon":null,"Sort":0,"PermissionValues":[],"Id":"1193158630615027712","Value":"1193158630615027712","ParentId":"1193158266167758848","Level":2,"Text":"框架介绍","Children":null},{"Type":1,"Url":"/Home/Statis","path":"/Home/Statis","NeedAction":false,"TypeText":"页面","NeedActionText":"否","children":null,"title":"运营统计","value":"1193158780011941888","key":"1193158780011941888","selectable":false,"icon":null,"Sort":0,"PermissionValues":[],"Id":"1193158780011941888","Value":"1193158780011941888","ParentId":"1193158266167758848","Level":2,"Text":"运营统计","Children":null}],"title":"首页","value":"1193158266167758848","key":"1193158266167758848","selectable":false,"icon":"home......
+
+2020-09-16 18:29:24.545 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:29:24.562 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetAllDbLink
+Time:41ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:29:24.741 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:31:04.221 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-16 18:31:04.633 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-16 18:31:04.641 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-16 18:31:04.644 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-16 18:31:04.649 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api
+2020-09-16 18:31:04.652 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-16 18:31:16.678 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:31:16.733 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetAllDbLink
+Time:645ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:31:17.005 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (42ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:32:15.383 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetDbTableList
+Time:58531ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"linkId":"1183373232498020352"}
+
+Response:
+
+2020-09-16 18:32:15.393 +08:00 [ERR Coldairarrow.Api.GlobalExceptionFilter] 
+System.InvalidOperationException: Instance failure.
+   at Castle.DynamicProxy.AsyncInterceptorBase.InterceptSynchronousResult[TResult](AsyncInterceptorBase me, IInvocation invocation)
+   at Castle.DynamicProxy.AsyncInterceptorBase.Castle.DynamicProxy.IAsyncInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IBuildCodeBusinessProxy.GetDbTableList(String linkId)
+   at Coldairarrow.Api.Controllers.Base_Manage.BuildCodeController.GetDbTableList(DbTablesInputDTO input)
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-09-16 18:32:17.710 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:32:17.715 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetAllDbLink
+Time:9ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:32:17.764 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:35:14.090 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-16 18:35:14.524 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-16 18:35:14.532 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-16 18:35:14.536 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-16 18:35:14.540 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api
+2020-09-16 18:35:14.543 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-16 18:35:22.448 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:35:22.523 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetAllDbLink
+Time:745ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:35:22.785 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (30ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:36:41.096 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetDbTableList
+Time:78465ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"linkId":"1183373232498020352"}
+
+Response:
+
+2020-09-16 18:36:41.112 +08:00 [ERR Coldairarrow.Api.GlobalExceptionFilter] 
+System.InvalidOperationException: Instance failure.
+   at Castle.DynamicProxy.AsyncInterceptorBase.InterceptSynchronousResult[TResult](AsyncInterceptorBase me, IInvocation invocation)
+   at Castle.DynamicProxy.AsyncInterceptorBase.Castle.DynamicProxy.IAsyncInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IBuildCodeBusinessProxy.GetDbTableList(String linkId)
+   at Coldairarrow.Api.Controllers.Base_Manage.BuildCodeController.GetDbTableList(DbTablesInputDTO input) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Controllers\Base_Manage\BuildCodeController.cs:line 32
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-09-16 18:36:43.421 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:36:43.430 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetAllDbLink
+Time:13ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:36:43.480 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:39:05.413 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetDbTableList
+Time:141939ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"linkId":"1183373232498020352"}
+
+Response:
+
+2020-09-16 18:39:05.424 +08:00 [ERR Coldairarrow.Api.GlobalExceptionFilter] 
+System.InvalidOperationException: Instance failure.
+   at Castle.DynamicProxy.AsyncInterceptorBase.InterceptSynchronousResult[TResult](AsyncInterceptorBase me, IInvocation invocation)
+   at Castle.DynamicProxy.AsyncInterceptorBase.Castle.DynamicProxy.IAsyncInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IBuildCodeBusinessProxy.GetDbTableList(String linkId)
+   at Coldairarrow.Api.Controllers.Base_Manage.BuildCodeController.GetDbTableList(DbTablesInputDTO input) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Controllers\Base_Manage\BuildCodeController.cs:line 32
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-09-16 18:39:09.252 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:39:09.260 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetAllDbLink
+Time:10ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:39:09.316 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:40:09.692 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-16 18:40:10.070 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-16 18:40:10.075 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-16 18:40:10.079 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-16 18:40:10.082 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api
+2020-09-16 18:40:10.086 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-16 18:40:18.561 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (75ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-16 18:40:18.911 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (4ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-16 18:40:18.995 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-16 18:40:19.013 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-16 18:40:19.018 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-16 18:40:19.023 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-16 18:40:19.036 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id]
+FROM [Base_Action] AS [b]
+2020-09-16 18:40:19.094 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[Type] IN (2) AND [b].[Id] IN (N'1178957405992521728', N'1178957553778823168', N'1179018395304071168', N'1182652266117599232', N'1182652367447789568', N'1182652433302556672', N'1188801057778569216', N'1188801057778569217', N'1188801057778569218', N'1188801109783744512', N'1188801109783744513', N'1188801109783744514', N'1188801273885888512', N'1188801273885888513', N'1188801273885888514', N'1188801341661646848', N'1188801341661646849', N'1188801341661646850', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1193527101521661952', N'1193527101521661953', N'1193527101521661954', N'1248570020770877440')
+ORDER BY [b].[Sort]
+2020-09-16 18:40:19.128 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Home/GetOperatorInfo
+Time:1367ms
+Method:POST
+ContentType:null
+Body:
+
+Response:{"Data":{"UserInfo":{"Id":"Admin","CreateTime":"2019-09-13 21:10:03.000","CreatorId":"Admin","Deleted":false,"UserName":"Admin","Password":"e10adc3949ba59abbe56e057f20f883e","RealName":"超级管理员","Sex":1,"Birthday":"2019-09-13 00:00:00.000","DepartmentId":"1181175685528424448","RoleNames":"超级管理员","RoleIdList":["1251144116734005248"],"RoleNameList":["超级管理员"],"RoleType":1,"DepartmentName":"宁波分公司","SexText":"男人","BirthdayText":"2019-09-13"},"Permissions":["Base_Role.Add","Base_Role.Edit","Base_Role.Delete","Base_Department.Add","Base_Department.Edit","Base_Department.Delete","Base_AppSecret.Add","Base_AppSecret.Edit","Base_AppSecret.Delete","Base_Action.Add","Base_Action.Edit","Base_Action.Delete","Base_User.Add","Base_User.Edit","Base_User.Delete"]},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:40:19.183 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-16 18:40:19.189 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-16 18:40:19.195 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-16 18:40:19.200 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id]
+FROM [Base_Action] AS [b]
+2020-09-16 18:40:19.207 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[Type] IN (0, 1) AND [b].[Id] IN (N'1178957405992521728', N'1178957553778823168', N'1179018395304071168', N'1182652266117599232', N'1182652367447789568', N'1182652433302556672', N'1188801057778569216', N'1188801057778569217', N'1188801057778569218', N'1188801109783744512', N'1188801109783744513', N'1188801109783744514', N'1188801273885888512', N'1188801273885888513', N'1188801273885888514', N'1188801341661646848', N'1188801341661646849', N'1188801341661646850', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1193527101521661952', N'1193527101521661953', N'1193527101521661954', N'1248570020770877440')
+ORDER BY [b].[Sort]
+2020-09-16 18:40:19.221 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[ParentId] IN (N'1182652266117599232', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1178957405992521728', N'1182652367447789568', N'1182652433302556672', N'1179018395304071168', N'1178957553778823168', N'1248570020770877440') AND ([b].[Type] = 2)
+2020-09-16 18:40:19.243 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Home/GetOperatorMenuList
+Time:66ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Type":0,"Url":null,"path":null,"NeedAction":true,"TypeText":"菜单","NeedActionText":"是","children":[{"Type":1,"Url":"/Home/Introduce","path":"/Home/Introduce","NeedAction":false,"TypeText":"页面","NeedActionText":"否","children":null,"title":"框架介绍","value":"1193158630615027712","key":"1193158630615027712","selectable":false,"icon":null,"Sort":0,"PermissionValues":[],"Id":"1193158630615027712","Value":"1193158630615027712","ParentId":"1193158266167758848","Level":2,"Text":"框架介绍","Children":null},{"Type":1,"Url":"/Home/Statis","path":"/Home/Statis","NeedAction":false,"TypeText":"页面","NeedActionText":"否","children":null,"title":"运营统计","value":"1193158780011941888","key":"1193158780011941888","selectable":false,"icon":null,"Sort":0,"PermissionValues":[],"Id":"1193158780011941888","Value":"1193158780011941888","ParentId":"1193158266167758848","Level":2,"Text":"运营统计","Children":null}],"title":"首页","value":"1193158266167758848","key":"1193158266167758848","selectable":false,"icon":"home......
+
+2020-09-16 18:40:19.769 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:40:19.785 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetAllDbLink
+Time:40ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:40:19.946 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:41:24.353 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-16 18:41:24.811 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-16 18:41:24.820 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-16 18:41:24.834 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-16 18:41:24.840 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api
+2020-09-16 18:41:24.844 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-16 18:41:38.404 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (66ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:41:38.849 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (29ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+ORDER BY [b].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2020-09-16 18:41:38.885 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Base_DbLink/GetDataList
+Time:1236ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"PageIndex":1,"PageRows":10,"SortField":"Id","SortType":"asc"}
+
+Response:{"Total":1,"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":null}
+
+2020-09-16 18:41:46.839 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__p_0
+2020-09-16 18:41:47.022 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Base_DbLink/GetTheData
+Time:256ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"id":"1183373232498020352"}
+
+Response:{"Data":{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:41:53.424 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (3ms) [Parameters=[@p6='?' (Size = 450), @p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Base_DbLink] SET [ConnectionStr] = @p0, [CreateTime] = @p1, [CreatorId] = @p2, [DbType] = @p3, [Deleted] = @p4, [LinkName] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;
+2020-09-16 18:41:53.476 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Base_DbLink/SaveData
+Time:178ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:41:53.537 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:41:53.564 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+ORDER BY [b].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2020-09-16 18:41:53.573 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Base_DbLink/GetDataList
+Time:40ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"PageIndex":1,"PageRows":10,"SortField":"Id","SortType":"asc"}
+
+Response:{"Total":1,"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":null}
+
+2020-09-16 18:41:57.804 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+2020-09-16 18:41:57.811 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetAllDbLink
+Time:25ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:41:57.875 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:41:58.452 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetDbTableList
+Time:592ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"linkId":"1183373232498020352"}
+
+Response:{"Data":[{"TableName":"Base_Action","Description":"系统权限表"},{"TableName":"Base_AppSecret","Description":"应用密钥表"},{"TableName":"Base_BuildTest","Description":"生成测试表"},{"TableName":"Base_DbLink","Description":"数据库连接表"},{"TableName":"Base_Department","Description":"部门表"},{"TableName":"Base_Role","Description":"系统角色表"},{"TableName":"Base_RoleAction","Description":"角色权限表"},{"TableName":"Base_User","Description":"系统用户表"},{"TableName":"Base_UserDecimal","Description":"Base_UserDecimal"},{"TableName":"Base_UserLog","Description":"系统日志表"},{"TableName":"Base_UserRole","Description":"用户角色表"},{"TableName":"Menu_Servise","Description":"Menu_Servise"},{"TableName":"MessageInfo","Description":"MessageInfo"},{"TableName":"ServiceTel","Description":"ServiceTel"}],"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:44:36.173 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:44:36.182 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:44:36.860 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/Build
+Time:691ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"buildTypes":["0"],"tables":["Base_UserDecimal"],"linkId":"1183373232498020352","areaName":"D:\\webs\\Colder.Admin.AntdVue-master\\src\\Coldairarrow.Entity\\UserDecilmal"}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:45:05.965 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:45:05.973 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:45:06.156 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/Build
+Time:194ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"buildTypes":["1"],"tables":["Base_UserDecimal"],"linkId":"1183373232498020352","areaName":"D:\\webs\\Colder.Admin.AntdVue-master\\src\\Coldairarrow.Business\\UserDecilmal"}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:45:50.107 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:45:50.117 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:45:50.290 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/Build
+Time:186ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"buildTypes":["2"],"tables":["Base_UserDecimal"],"linkId":"1183373232498020352","areaName":"D:\\webs\\Colder.Admin.AntdVue-master\\src\\Coldairarrow.Api\\Controllers\\UserDecilmal"}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:46:35.682 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:46:35.688 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:46:37.491 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/Build
+Time:1811ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"buildTypes":["0"],"tables":["ServiceTel","MessageInfo","Menu_Servise"],"linkId":"1183373232498020352","areaName":"D:\\webs\\Colder.Admin.AntdVue-master\\src\\Coldairarrow.Entity\\Message"}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:47:08.898 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:47:08.906 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:47:09.203 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/Build
+Time:310ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"buildTypes":["1"],"tables":["ServiceTel","MessageInfo","Menu_Servise"],"linkId":"1183373232498020352","areaName":"D:\\webs\\Colder.Admin.AntdVue-master\\src\\Coldairarrow.IBusiness\\Message"}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-16 18:48:18.482 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (5ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:48:18.491 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-16 18:48:18.778 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/Build
+Time:307ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"buildTypes":["2"],"tables":["ServiceTel","MessageInfo","Menu_Servise"],"linkId":"1183373232498020352","areaName":"D:\\webs\\Colder.Admin.AntdVue-master\\src\\Coldairarrow.Api\\Controllers\\Message"}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+

@@ -1,0 +1,610 @@
+2020-09-19 14:29:09.195 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-19 14:29:11.278 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-19 14:29:11.351 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-19 14:29:11.354 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-19 14:29:11.359 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api
+2020-09-19 14:29:11.363 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-19 14:34:59.418 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (85ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-19 14:34:59.849 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (19ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-19 14:34:59.920 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:2096ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306422215759106048","SendId":"1306487931334037504","News":"string","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-19 14:35:03.442 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (9ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-19 14:35:03.455 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-19 14:35:03.473 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:69ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306422215759106048","SendId":"1306487931334037504","News":"string","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-19 14:35:15.230 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (3ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-19 14:35:15.253 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-19 14:35:15.265 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:43ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306422215759106048","SendId":"1306487931334037504","News":"string","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-19 14:35:16.224 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-19 14:35:16.237 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-19 14:35:16.246 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:27ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306422215759106048","SendId":"1306487931334037504","News":"string","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-19 14:35:28.875 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (4ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-19 14:35:28.899 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-19 14:35:28.925 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:59ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306422215759106048","SendId":"1306487931334037504","News":"string","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-19 14:36:00.921 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-19 14:36:01.709 +08:00 [ERR Microsoft.EntityFrameworkCore.Database.Command] Failed executing DbCommand (119ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-19 14:36:01.795 +08:00 [ERR Microsoft.EntityFrameworkCore.Update] An exception occurred in the database while saving changes for context type 'EFCore.Sharding.GenericDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): 将截断字符串或二进制数据。
+语句已终止。
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:1fef1b66-a788-4d9f-a597-de9ae7ad5a9f
+Error Number:8152,State:13,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): 将截断字符串或二进制数据。
+语句已终止。
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:1fef1b66-a788-4d9f-a597-de9ae7ad5a9f
+Error Number:8152,State:13,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2020-09-19 14:36:02.491 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:1576ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306422215759106048","SendId":"1306487931334037504","News":"string","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:
+
+2020-09-19 14:36:02.502 +08:00 [ERR Coldairarrow.Api.GlobalExceptionFilter] 
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): 将截断字符串或二进制数据。
+语句已终止。
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:1fef1b66-a788-4d9f-a597-de9ae7ad5a9f
+Error Number:8152,State:13,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at EFCore.Sharding.GenericDbAccessor.SaveChangesAsync(Boolean tracking)
+   at EFCore.Sharding.GenericDbAccessor.InsertAsync[T](List`1 entities, Boolean tracking)
+   at Coldairarrow.Business.BaseBusiness`1.InsertAsync(T entity) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Business\BaseBusiness.T.cs:line 81
+   at Coldairarrow.Business.MessageInfoBusiness.AddDataAsync(MessageInfo data) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Business\Message\MessageInfoBusiness.cs:line 46
+   at Castle.DynamicProxy.AsyncInterceptorBase.ProceedAsynchronous(IInvocation invocation)
+   at Coldairarrow.Util.CastleInterceptor.InterceptAsync(IInvocation invocation, Func`2 proceed) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\AOP\Abstraction\CastleInterceptor.cs:line 48
+   at Coldairarrow.Api.Controllers.MessageInfoController.SendMessage(Message message) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Controllers\Message\MessageInfoController.cs:line 172
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-09-19 14:36:30.917 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (12ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-19 14:36:31.006 +08:00 [ERR Microsoft.EntityFrameworkCore.Database.Command] Failed executing DbCommand (8ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-19 14:36:31.018 +08:00 [ERR Microsoft.EntityFrameworkCore.Update] An exception occurred in the database while saving changes for context type 'EFCore.Sharding.GenericDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): 将截断字符串或二进制数据。
+语句已终止。
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:1fef1b66-a788-4d9f-a597-de9ae7ad5a9f
+Error Number:8152,State:13,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): 将截断字符串或二进制数据。
+语句已终止。
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:1fef1b66-a788-4d9f-a597-de9ae7ad5a9f
+Error Number:8152,State:13,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2020-09-19 14:36:31.536 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:635ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306422215759106048","SendId":"1306487931334037504","News":"string","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:
+
+2020-09-19 14:36:31.548 +08:00 [ERR Coldairarrow.Api.GlobalExceptionFilter] 
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): 将截断字符串或二进制数据。
+语句已终止。
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:1fef1b66-a788-4d9f-a597-de9ae7ad5a9f
+Error Number:8152,State:13,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at EFCore.Sharding.GenericDbAccessor.SaveChangesAsync(Boolean tracking)
+   at EFCore.Sharding.GenericDbAccessor.InsertAsync[T](List`1 entities, Boolean tracking)
+   at Coldairarrow.Business.BaseBusiness`1.InsertAsync(T entity) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Business\BaseBusiness.T.cs:line 81
+   at Coldairarrow.Business.MessageInfoBusiness.AddDataAsync(MessageInfo data) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Business\Message\MessageInfoBusiness.cs:line 46
+   at Castle.DynamicProxy.AsyncInterceptorBase.ProceedAsynchronous(IInvocation invocation)
+   at Coldairarrow.Util.CastleInterceptor.InterceptAsync(IInvocation invocation, Func`2 proceed) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\AOP\Abstraction\CastleInterceptor.cs:line 48
+   at Coldairarrow.Api.Controllers.MessageInfoController.SendMessage(Message message) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Controllers\Message\MessageInfoController.cs:line 172
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-09-19 14:38:09.690 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (14ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-19 14:38:09.702 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-19 14:38:09.710 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:38ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306487931334037504","SendId":"1306422215759106048","News":"1306487931334037504","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-19 14:38:42.165 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-19 14:38:42.182 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-19 14:38:42.192 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:32ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306487931334037504","SendId":"1306422215759106048","News":"1306487931334037504","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-19 14:38:56.427 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (20ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE ([b].[Id] = @__get_Item_0) AND ([b].[data2] = N'3')
+2020-09-19 14:38:56.438 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE ([b].[Id] = @__get_Item_0) AND ([b].[data2] = N'3')
+2020-09-19 14:38:56.508 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (11ms) [Parameters=[@__res_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__res_Id_0
+2020-09-19 14:38:56.633 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetAllKefu
+Time:281ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","CreateTime":"2020-09-19T06:38:48.731Z","CreatorId":"string","Deleted":true,"UserId":"string","Name":"string","Openid":"string","data1":"string","data2":"string","data3":0,"data4":"string"}
+
+Response:
+
+2020-09-19 14:38:56.640 +08:00 [ERR Coldairarrow.Api.GlobalExceptionFilter] 
+System.Collections.Generic.KeyNotFoundException: The given key 'string' was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at Coldairarrow.Api.Controllers.MessageInfoController.GetAllKefu(Base_UserDecimal UserDecimal) in D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api\Controllers\Message\MessageInfoController.cs:line 408
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-09-19 14:39:04.811 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE ([b].[Id] = @__get_Item_0) AND ([b].[data2] = N'3')
+2020-09-19 14:39:04.828 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (5ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE ([b].[Id] = @__get_Item_0) AND ([b].[data2] = N'3')
+2020-09-19 14:39:04.844 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[@__res_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__res_Id_0
+2020-09-19 14:39:05.017 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (64ms) [Parameters=[@p10='?' (Size = 450), @p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Base_UserDecimal] SET [CreateTime] = @p0, [CreatorId] = @p1, [Deleted] = @p2, [Name] = @p3, [Openid] = @p4, [UserId] = @p5, [data1] = @p6, [data2] = @p7, [data3] = @p8, [data4] = @p9
+WHERE [Id] = @p10;
+SELECT @@ROWCOUNT;
+2020-09-19 14:39:05.042 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetAllKefu
+Time:238ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","CreateTime":"2020-09-19T06:38:48.731Z","CreatorId":"string","Deleted":true,"UserId":"","Name":"string","Openid":"string","data1":"string","data2":"string","data3":0,"data4":"string"}
+
+Response:{"Data":{"Id":"1306422215759106048","CreateTime":"2020-09-17 10:38:23.047","CreatorId":null,"Deleted":false,"UserId":null,"Name":"雪","Openid":"oMYKR4hY7NY-I2cZvZzCF9ODhg6M","data1":null,"data2":"3","data3":74,"data4":"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI732yMt3JgXiaBwU45gPLMF2qIGtBa9SkbfEgpoFT4wich0BQHjAwtBGNJXuKfTGQMEjwkDWQL4XIw/132"},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-19 14:47:50.173 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (31ms) [Parameters=[@__input_userName_0='?' (Size = 4000), @__input_password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Birthday], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[DepartmentId], [b].[Password], [b].[RealName], [b].[Sex], [b].[UserName]
+FROM [Base_User] AS [b]
+WHERE ([b].[UserName] = @__input_userName_0) AND ([b].[Password] = @__input_password_1)
+2020-09-19 14:47:50.191 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Home/SubmitLogin
+Time:176ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"userName":"Admin","password":"123456"}
+
+Response:{"Data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiJBZG1pbiIsIkV4cGlyZSI6IjIwMjAtMDktMjAgMTQ6NDc6NTAuMTgzIn0.z9La1WgnQ8RU7g-aHzJx1LRInykM-MiMO1znopS4oD4","Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-19 14:47:50.592 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-19 14:47:52.038 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (42ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-19 14:47:52.162 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-19 14:47:52.182 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-19 14:47:52.191 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-19 14:47:52.199 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-19 14:47:52.227 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id]
+FROM [Base_Action] AS [b]
+2020-09-19 14:47:52.311 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[Type] IN (2) AND [b].[Id] IN (N'1178957405992521728', N'1178957553778823168', N'1179018395304071168', N'1182652266117599232', N'1182652367447789568', N'1182652433302556672', N'1188801057778569216', N'1188801057778569217', N'1188801057778569218', N'1188801109783744512', N'1188801109783744513', N'1188801109783744514', N'1188801273885888512', N'1188801273885888513', N'1188801273885888514', N'1188801341661646848', N'1188801341661646849', N'1188801341661646850', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1193527101521661952', N'1193527101521661953', N'1193527101521661954', N'1248570020770877440')
+ORDER BY [b].[Sort]
+2020-09-19 14:47:52.364 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Home/GetOperatorInfo
+Time:2125ms
+Method:POST
+ContentType:null
+Body:
+
+Response:{"Data":{"UserInfo":{"Id":"Admin","CreateTime":"2019-09-13 21:10:03.000","CreatorId":"Admin","Deleted":false,"UserName":"Admin","Password":"e10adc3949ba59abbe56e057f20f883e","RealName":"超级管理员","Sex":1,"Birthday":"2019-09-13 00:00:00.000","DepartmentId":"1181175685528424448","RoleNames":"超级管理员","RoleIdList":["1251144116734005248"],"RoleNameList":["超级管理员"],"RoleType":1,"DepartmentName":"宁波分公司","SexText":"男人","BirthdayText":"2019-09-13"},"Permissions":["Base_Role.Add","Base_Role.Edit","Base_Role.Delete","Base_Department.Add","Base_Department.Edit","Base_Department.Delete","Base_AppSecret.Add","Base_AppSecret.Edit","Base_AppSecret.Delete","Base_Action.Add","Base_Action.Edit","Base_Action.Delete","Base_User.Add","Base_User.Edit","Base_User.Delete"]},"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-19 14:47:52.400 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+2020-09-19 14:47:52.412 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__search_userId_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[UserName], [b].[Password], [b].[RealName], [b].[Sex], [b].[Birthday], [b].[DepartmentId], [b0].[Name] AS [DepartmentName]
+FROM [Base_User] AS [b]
+LEFT JOIN [Base_Department] AS [b0] ON [b].[DepartmentId] = [b0].[Id]
+WHERE [b].[Id] = @__search_userId_0
+ORDER BY [b].[Id]
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2020-09-19 14:47:52.420 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[UserId], [b0].[Id] AS [RoleId], [b0].[RoleName]
+FROM [Base_UserRole] AS [b]
+INNER JOIN [Base_Role] AS [b0] ON [b].[RoleId] = [b0].[Id]
+WHERE [b].[UserId] IN (N'Admin')
+2020-09-19 14:47:52.430 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id]
+FROM [Base_Action] AS [b]
+2020-09-19 14:47:52.446 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[Type] IN (0, 1) AND [b].[Id] IN (N'1178957405992521728', N'1178957553778823168', N'1179018395304071168', N'1182652266117599232', N'1182652367447789568', N'1182652433302556672', N'1188801057778569216', N'1188801057778569217', N'1188801057778569218', N'1188801109783744512', N'1188801109783744513', N'1188801109783744514', N'1188801273885888512', N'1188801273885888513', N'1188801273885888514', N'1188801341661646848', N'1188801341661646849', N'1188801341661646850', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1193527101521661952', N'1193527101521661953', N'1193527101521661954', N'1248570020770877440')
+ORDER BY [b].[Sort]
+2020-09-19 14:47:52.471 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Icon], [b].[Name], [b].[NeedAction], [b].[ParentId], [b].[Sort], [b].[Type], [b].[Url], [b].[Value]
+FROM [Base_Action] AS [b]
+WHERE [b].[ParentId] IN (N'1182652266117599232', N'1193158266167758848', N'1193158630615027712', N'1193158780011941888', N'1178957405992521728', N'1182652367447789568', N'1182652433302556672', N'1179018395304071168', N'1178957553778823168', N'1248570020770877440') AND ([b].[Type] = 2)
+2020-09-19 14:47:52.534 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Home/GetOperatorMenuList
+Time:136ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Type":0,"Url":null,"path":null,"NeedAction":true,"TypeText":"菜单","NeedActionText":"是","children":[{"Type":1,"Url":"/Home/Introduce","path":"/Home/Introduce","NeedAction":false,"TypeText":"页面","NeedActionText":"否","children":null,"title":"框架介绍","value":"1193158630615027712","key":"1193158630615027712","selectable":false,"icon":null,"Sort":0,"PermissionValues":[],"Id":"1193158630615027712","Value":"1193158630615027712","ParentId":"1193158266167758848","Level":2,"Text":"框架介绍","Children":null},{"Type":1,"Url":"/Home/Statis","path":"/Home/Statis","NeedAction":false,"TypeText":"页面","NeedActionText":"否","children":null,"title":"运营统计","value":"1193158780011941888","key":"1193158780011941888","selectable":false,"icon":null,"Sort":0,"PermissionValues":[],"Id":"1193158780011941888","Value":"1193158780011941888","ParentId":"1193158266167758848","Level":2,"Text":"运营统计","Children":null}],"title":"首页","value":"1193158266167758848","key":"1193158266167758848","selectable":false,"icon":"home......
+
+2020-09-19 14:48:55.122 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+2020-09-19 14:48:55.153 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetAllDbLink
+Time:64ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{}
+
+Response:{"Data":[{"Id":"1183373232498020352","CreateTime":"2019-10-13 21:25:39.000","CreatorId":"Admin","Deleted":false,"LinkName":"BaseDb","ConnectionStr":"Data Source=LENOVO-PC\\MSSQLSERVER01;DATABASE=ImmeDiately;User ID=sa;Password=123456","DbType":"SqlServer"}],"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-19 14:48:55.257 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-19 14:48:56.527 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/GetDbTableList
+Time:1281ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"linkId":"1183373232498020352"}
+
+Response:{"Data":[{"TableName":"Base_Action","Description":"系统权限表"},{"TableName":"Base_AppSecret","Description":"应用密钥表"},{"TableName":"Base_BuildTest","Description":"生成测试表"},{"TableName":"Base_DbLink","Description":"数据库连接表"},{"TableName":"Base_Department","Description":"部门表"},{"TableName":"Base_Role","Description":"系统角色表"},{"TableName":"Base_RoleAction","Description":"角色权限表"},{"TableName":"Base_User","Description":"系统用户表"},{"TableName":"Base_UserDecimal","Description":"Base_UserDecimal"},{"TableName":"Base_UserLog","Description":"系统日志表"},{"TableName":"Base_UserRole","Description":"用户角色表"},{"TableName":"Expression","Description":"Expression"},{"TableName":"Menu_Servise","Description":"Menu_Servise"},{"TableName":"MessageInfo","Description":"MessageInfo"},{"TableName":"ServiceTel","Description":"ServiceTel"}],"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-19 14:49:05.384 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-19 14:49:05.394 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-19 14:49:06.308 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/Build
+Time:929ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"buildTypes":["2"],"tables":["Expression"],"linkId":"1183373232498020352","areaName":"D:\\webs\\Colder.Admin.AntdVue-master\\src\\Coldairarrow.Api\\Controllers\\Face"}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-19 14:49:34.375 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-19 14:49:34.385 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (0ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-19 14:49:35.306 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/Build
+Time:935ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"buildTypes":["1"],"tables":["Expression"],"linkId":"1183373232498020352","areaName":"D:\\webs\\Colder.Admin.AntdVue-master\\src\\Coldairarrow.Entity\\Face"}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-19 14:49:53.227 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (2ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-19 14:49:53.239 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (4ms) [Parameters=[@__linkId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[ConnectionStr], [b].[CreateTime], [b].[CreatorId], [b].[DbType], [b].[Deleted], [b].[LinkName]
+FROM [Base_DbLink] AS [b]
+WHERE [b].[Id] = @__linkId_0
+2020-09-19 14:49:53.424 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/BuildCode/Build
+Time:201ms
+Method:POST
+ContentType:application/json;charset=UTF-8
+Body:{"buildTypes":["0"],"tables":["Expression"],"linkId":"1183373232498020352","areaName":"D:\\webs\\Colder.Admin.AntdVue-master\\src\\Coldairarrow.Entity\\Face"}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-19 15:12:49.774 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-19 15:12:51.799 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-19 15:12:51.805 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-19 15:12:51.809 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-19 15:12:51.815 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Api
+2020-09-19 15:12:51.819 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-19 15:14:32.835 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (353ms) [Parameters=[@__input_userName_0='?' (Size = 4000), @__input_password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Birthday], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[DepartmentId], [b].[Password], [b].[RealName], [b].[Sex], [b].[UserName]
+FROM [Base_User] AS [b]
+WHERE ([b].[UserName] = @__input_userName_0) AND ([b].[Password] = @__input_password_1)
+2020-09-19 15:14:33.010 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Base_Manage/Home/SubmitLogin
+Time:2203ms
+Method:POST
+ContentType:application/json
+Body:{"userName":"admin","password":"123456"}
+
+Response:{"Data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiJBZG1pbiIsIkV4cGlyZSI6IjIwMjAtMDktMjAgMTU6MTQ6MzIuOTA5In0.IChzApiR6voTVhacDDMeA1B2FLty2xQiYAN_xydFG1c","Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-19 15:14:50.981 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CreateTime], [e].[CreatorId], [e].[Decimal], [e].[Deleted], [e].[Face], [e].[Sort], [e].[Url]
+FROM [Expression] AS [e]
+WHERE [e].[Deleted] = CAST(0 AS bit)
+ORDER BY [e].[Sort]
+2020-09-19 15:14:50.992 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Face/Expression/GetAllList
+Time:105ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","CreateTime":"2020-09-19T07:14:48.518Z","CreatorId":"string","Deleted":true,"Face":"string","Decimal":"string","Url":"string","Sort":0}
+
+Response:{"Data":[],"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+

@@ -1,0 +1,12 @@
+D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\bin\Release\netstandard2.0\Coldairarrow.Util.deps.json
+D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\bin\Release\netstandard2.0\Coldairarrow.Util.dll
+D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\bin\Release\netstandard2.0\Coldairarrow.Util.pdb
+D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\bin\Release\netstandard2.0\Coldairarrow.Util.xml
+D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\bin\Release\netstandard2.0\Aspose.Cells.dll
+D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\obj\Release\netstandard2.0\01.Coldairarrow.Util.csprojAssemblyReference.cache
+D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\obj\Release\netstandard2.0\01.Coldairarrow.Util.AssemblyInfoInputs.cache
+D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\obj\Release\netstandard2.0\01.Coldairarrow.Util.AssemblyInfo.cs
+D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\obj\Release\netstandard2.0\01.Coldairarrow.Util.csproj.CoreCompileInputs.cache
+D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\obj\Release\netstandard2.0\01.Coldairarrow.Util.csproj.CopyComplete
+D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\obj\Release\netstandard2.0\Coldairarrow.Util.dll
+D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\obj\Release\netstandard2.0\Coldairarrow.Util.pdb
