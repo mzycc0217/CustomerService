@@ -13,3 +13,17 @@ D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Entity\obj\Release\netstand
 D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Entity\obj\Release\netstandard2.0\02.Coldairarrow.Entity.csproj.CopyComplete
 D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Entity\obj\Release\netstandard2.0\Coldairarrow.Entity.dll
 D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Entity\obj\Release\netstandard2.0\Coldairarrow.Entity.pdb
+D:\桌面\test\CustomerService\Coldairarrow.Entity\bin\Release\netstandard2.0\Coldairarrow.Entity.deps.json
+D:\桌面\test\CustomerService\Coldairarrow.Entity\bin\Release\netstandard2.0\Coldairarrow.Entity.dll
+D:\桌面\test\CustomerService\Coldairarrow.Entity\bin\Release\netstandard2.0\Coldairarrow.Entity.pdb
+D:\桌面\test\CustomerService\Coldairarrow.Entity\bin\Release\netstandard2.0\Coldairarrow.Entity.xml
+D:\桌面\test\CustomerService\Coldairarrow.Entity\bin\Release\netstandard2.0\Coldairarrow.Util.dll
+D:\桌面\test\CustomerService\Coldairarrow.Entity\bin\Release\netstandard2.0\Aspose.Cells.dll
+D:\桌面\test\CustomerService\Coldairarrow.Entity\bin\Release\netstandard2.0\Coldairarrow.Util.pdb
+D:\桌面\test\CustomerService\Coldairarrow.Entity\bin\Release\netstandard2.0\Coldairarrow.Util.xml
+D:\桌面\test\CustomerService\Coldairarrow.Entity\obj\Release\netstandard2.0\02.Coldairarrow.Entity.csprojAssemblyReference.cache
+D:\桌面\test\CustomerService\Coldairarrow.Entity\obj\Release\netstandard2.0\02.Coldairarrow.Entity.AssemblyInfoInputs.cache
+D:\桌面\test\CustomerService\Coldairarrow.Entity\obj\Release\netstandard2.0\02.Coldairarrow.Entity.AssemblyInfo.cs
+D:\桌面\test\CustomerService\Coldairarrow.Entity\obj\Release\netstandard2.0\02.Coldairarrow.Entity.csproj.CopyComplete
+D:\桌面\test\CustomerService\Coldairarrow.Entity\obj\Release\netstandard2.0\Coldairarrow.Entity.dll
+D:\桌面\test\CustomerService\Coldairarrow.Entity\obj\Release\netstandard2.0\Coldairarrow.Entity.pdb

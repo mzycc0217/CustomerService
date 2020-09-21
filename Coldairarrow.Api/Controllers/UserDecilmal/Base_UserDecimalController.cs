@@ -59,7 +59,36 @@ namespace Coldairarrow.Api.Controllers
             }
             else
             {
+                if (data.data2=="3")
+                {
+
+                    var p = await _db.GetIQueryable<Menu_Servise>().FirstOrDefaultAsync(p=>p.UserID==data.Id);
+
+                    if (p!=null)
+                    {
+                      await _db.DeleteAsync(p);
+                    }
+                    
+
+                    Menu_Servise menu_Servised = new Menu_Servise
+                    {
+                        // 客户
+                        MenuID = "1234",
+                        UserID = data.Id
+
+                    };
+                    InitEntity(menu_Servised);
+                    await _db.InsertAsync(menu_Servised);
+                }
+
+                else
+                {
+                    var ps = await _db.GetIQueryable<Menu_Servise>().FirstOrDefaultAsync(p => p.UserID == data.Id);
+                    ps.MenuID = "1235";
+                    await _db.UpdateAsync(ps);
+                }
                 await _base_UserDecimalBus.UpdateDataAsync(data);
+
             }
         }
 

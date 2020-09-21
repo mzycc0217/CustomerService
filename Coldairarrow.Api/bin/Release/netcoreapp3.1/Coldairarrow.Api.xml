@@ -428,6 +428,66 @@
             页码
             </summary>
         </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.SendId">
+            <summary>
+            发送者Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.ReceiveId">
+            <summary>
+            接收者Id
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.News">
+            <summary>
+            发送消息
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.DTAE">
+            <summary>
+            DTAE
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.state">
+            <summary>
+            state
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.Data1">
+            <summary>
+            Data1
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.Data2">
+            <summary>
+            Data2
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.Name">
+            <summary>
+            Data1
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.data4">
+            <summary>
+            Data1
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.data3">
+            <summary>
+            Data1
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.data2">
+            <summary>
+            Data1
+            </summary>
+        </member>
         <member name="M:Coldairarrow.Api.websokcets.webServise.Echo(Microsoft.AspNetCore.Http.HttpContext,System.Net.WebSockets.WebSocket)">
             <summary>
             收发类

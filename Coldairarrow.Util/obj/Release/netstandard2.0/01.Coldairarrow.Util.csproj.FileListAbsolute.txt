@@ -10,3 +10,14 @@ D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\obj\Release\netstandar
 D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\obj\Release\netstandard2.0\01.Coldairarrow.Util.csproj.CopyComplete
 D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\obj\Release\netstandard2.0\Coldairarrow.Util.dll
 D:\webs\Colder.Admin.AntdVue-master\src\Coldairarrow.Util\obj\Release\netstandard2.0\Coldairarrow.Util.pdb
+D:\桌面\test\CustomerService\Coldairarrow.Util\bin\Release\netstandard2.0\Coldairarrow.Util.deps.json
+D:\桌面\test\CustomerService\Coldairarrow.Util\bin\Release\netstandard2.0\Coldairarrow.Util.dll
+D:\桌面\test\CustomerService\Coldairarrow.Util\bin\Release\netstandard2.0\Coldairarrow.Util.pdb
+D:\桌面\test\CustomerService\Coldairarrow.Util\bin\Release\netstandard2.0\Coldairarrow.Util.xml
+D:\桌面\test\CustomerService\Coldairarrow.Util\bin\Release\netstandard2.0\Aspose.Cells.dll
+D:\桌面\test\CustomerService\Coldairarrow.Util\obj\Release\netstandard2.0\01.Coldairarrow.Util.csprojAssemblyReference.cache
+D:\桌面\test\CustomerService\Coldairarrow.Util\obj\Release\netstandard2.0\01.Coldairarrow.Util.AssemblyInfoInputs.cache
+D:\桌面\test\CustomerService\Coldairarrow.Util\obj\Release\netstandard2.0\01.Coldairarrow.Util.AssemblyInfo.cs
+D:\桌面\test\CustomerService\Coldairarrow.Util\obj\Release\netstandard2.0\01.Coldairarrow.Util.csproj.CopyComplete
+D:\桌面\test\CustomerService\Coldairarrow.Util\obj\Release\netstandard2.0\Coldairarrow.Util.dll
+D:\桌面\test\CustomerService\Coldairarrow.Util\obj\Release\netstandard2.0\Coldairarrow.Util.pdb

@@ -5,6 +5,7 @@ using Coldairarrow.Business;
 using Coldairarrow.Entity;
 using Coldairarrow.Util;
 using EFCore.Sharding;
+using LinqKit;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic;
@@ -62,7 +63,7 @@ namespace Coldairarrow.Api.Controllers
                 InitEntity(data);
 
                 await _messageInfoBus.AddDataAsync(data);
-               
+
             }
             else
             {
@@ -71,7 +72,7 @@ namespace Coldairarrow.Api.Controllers
         }
 
         [HttpPost]
-    
+
         public async Task DeleteData(List<string> ids)
         {
             await _messageInfoBus.DeleteDataAsync(ids);
@@ -90,7 +91,7 @@ namespace Coldairarrow.Api.Controllers
         {
             //进行数据库处理
             //var sta = 0;
-            var rec= message.ReceiveId.Trim();
+            var rec = message.ReceiveId.Trim();
             var sen = message.SendId.Trim();
 
             MessageInfo info = new MessageInfo
@@ -104,6 +105,7 @@ namespace Coldairarrow.Api.Controllers
             };
             //转成Byte数组
             var p = await _db.GetIQueryable<Base_UserDecimal>().AsNoTracking().FirstOrDefaultAsync(p => p.Id == message.SendId);
+            message.Id = info.Id;
             message.base_UserDecimals = p;
             var ptime = DateTime.Now;
             var datas = ptime.ToLongDateString() + ptime.ToLongTimeString();
@@ -111,15 +113,15 @@ namespace Coldairarrow.Api.Controllers
 
             try
 
-             {
-                
+            {
+
                 info.state = 0;
                 var s = string.Empty;
                 byte[] aa;
                 WebSocket web;
                 if (webServise.webUser.TryGetValue(message.ReceiveId, out web))
                 {
-                    if (webServise.webUser[message.ReceiveId].State ==WebSocketState.Open)
+                    if (webServise.webUser[message.ReceiveId].State == WebSocketState.Open)
                     {
                         //已经处理的
                         info.Data1 = "0";
@@ -135,16 +137,16 @@ namespace Coldairarrow.Api.Controllers
                     {
                         message.Data1 = "1";
                         //未处理的
-                         info.Data1 = "1";
-                          s = JsonConvert.SerializeObject(message);
-                         aa = Encoding.Default.GetBytes(s);
+                        info.Data1 = "1";
+                        s = JsonConvert.SerializeObject(message);
+                        aa = Encoding.Default.GetBytes(s);
                         await webServise.webUser[sen].SendAsync(new ArraySegment<byte>(aa, 0, aa.Length), WebSocketMessageType.Text, true, CancellationToken.None);
-                      //  webServise.webUser[message.ReceiveId].Abort();
-                      //  webServise.webUser.Remove(message.ReceiveId);
+                        //  webServise.webUser[message.ReceiveId].Abort();
+                        //  webServise.webUser.Remove(message.ReceiveId);
                         //  await webServise.webUser[message.ReceiveId].CloseAsync(WebSocketCloseStatus.NormalClosure, "正常移除", CancellationToken.None);
-                       
+
                     }
-                   
+
                 }
                 else
                 {
@@ -153,12 +155,12 @@ namespace Coldairarrow.Api.Controllers
                     info.Data1 = "1";
                     s = JsonConvert.SerializeObject(message);
                     aa = Encoding.Default.GetBytes(s);
-                    
+
                     await webServise.webUser[sen].SendAsync(new ArraySegment<byte>(aa, 0, aa.Length), WebSocketMessageType.Text, true, CancellationToken.None);
 
                 }
 
-                
+
                 await _messageInfoBus.AddDataAsync(info);
             }
             catch (Exception ex)
@@ -188,26 +190,26 @@ namespace Coldairarrow.Api.Controllers
             {
 
                 List<Base_UserDecimal> vs = new List<Base_UserDecimal>();
-               
-               // webServise.webUser.Add("1306422215759106048", webSocket);
+
+                // webServise.webUser.Add("1306422215759106048", webSocket);
                 List<string> test = new List<string>();
-                if (webServise.webUser.Keys.Count!=0)
+                if (webServise.webUser.Keys.Count != 0)
                 {
-                 //  test.Add(webServise.webUser.Keys.ToString());
+                    //  test.Add(webServise.webUser.Keys.ToString());
                     foreach (var item in webServise.webUser.Keys)
                     {
                         test.Add(item);
                     }
                 }
-              
+
                 for (int i = 0; i < test.Count; i++)
                 {
                     var users = await _db.GetIQueryable<Base_UserDecimal>().FirstOrDefaultAsync(p => p.Id == test[i] && p.data2 == "3");
-                    if (users!=null)
+                    if (users != null)
                     {
-                    vs.Add(users);
+                        vs.Add(users);
                     }
-                    
+
 
                 }
                 //foreach (var item in webServise.webUser)
@@ -247,13 +249,13 @@ namespace Coldairarrow.Api.Controllers
                     foreach (var item in vs)
                     {
 
-                        var count =  c.HashGetAll(item.Id);
+                        var count = c.HashGetAll(item.Id);
                         //获取这个客服下的客户数量
                         List<Object> demolist = new List<Object>();
                         if (count.Length == 0)
                         {
                             await c.HashSetAsync(item.Id, UserDecimal.Id, DateTime.Now.ToString(), When.Always, CommandFlags.None);
-                           
+
                             var resd = new
                             {
                                 have = "1",
@@ -268,17 +270,17 @@ namespace Coldairarrow.Api.Controllers
                             {
                                 var pw = items.ToString();
                                 //  var hashmodel = JsonConvert.DeserializeObject(pw);
-                                if (items!=null)
+                                if (items != null)
                                 {
-                                   demolist.Add(items);
+                                    demolist.Add(items);
                                 }
-                               
+
                             }
                             //客户对应的数量
-                          
+
                             vs1.Add(new Demolist
                             {
-                                Name=item.Name,
+                                Name = item.Name,
                                 Id = item.Id,
                                 Count = demolist.Count
                             });
@@ -357,31 +359,31 @@ namespace Coldairarrow.Api.Controllers
 
             }
 
-            if (vs.Count==0)
+            if (vs.Count == 0)
             {
 
-            Base_UserDecimal ts = new Base_UserDecimal();
-            var q = await _db.GetIQueryable<Base_UserDecimal>().Where(p => p.data2 == "3").ToListAsync();
-            var t= q.Min(s=>s.data3);
-            if (t.Equals(0))
-            {
-             var s =  _db.GetIQueryable<Base_UserDecimal>().FirstOrDefault(p => p.data2 == "3");
-            s.data3 = s.data3 + 1;
-            await _db.UpdateAsync(s);
+                Base_UserDecimal ts = new Base_UserDecimal();
+                var q = await _db.GetIQueryable<Base_UserDecimal>().Where(p => p.data2 == "3").ToListAsync();
+                var t = q.Min(s => s.data3);
+                if (t.Equals(0))
+                {
+                    var s = _db.GetIQueryable<Base_UserDecimal>().FirstOrDefault(p => p.data2 == "3");
+                    s.data3 = s.data3 + 1;
+                    await _db.UpdateAsync(s);
                     if (!string.IsNullOrWhiteSpace(UserDecimal.UserId))
                     {
-                     if (webServise.webUser[UserDecimal.UserId].State==WebSocketState.Open)
-                     {
-                        await webServise.webUser[UserDecimal.UserId].SendAsync(new ArraySegment<byte>(aa, 0, aa.Length), WebSocketMessageType.Text, true, CancellationToken.None);
-                    }
+                        if (webServise.webUser[UserDecimal.UserId].State == WebSocketState.Open)
+                        {
+                            await webServise.webUser[UserDecimal.UserId].SendAsync(new ArraySegment<byte>(aa, 0, aa.Length), WebSocketMessageType.Text, true, CancellationToken.None);
+                        }
                     }
                     return s;
-            }
-            else
-            {
-                var s = _db.GetIQueryable<Base_UserDecimal>().FirstOrDefault(p => p.data2 == "3");
-                s.data3 = s.data3 + 1;
-                await _db.UpdateAsync(s);
+                }
+                else
+                {
+                    var s = _db.GetIQueryable<Base_UserDecimal>().FirstOrDefault(p => p.data2 == "3");
+                    s.data3 = s.data3 + 1;
+                    await _db.UpdateAsync(s);
                     if (!string.IsNullOrWhiteSpace(UserDecimal.UserId))
                     {
 
@@ -392,13 +394,13 @@ namespace Coldairarrow.Api.Controllers
                         }
                     }
                     return s;
-            }
+                }
             }
             else
             {
-                var t= vs.Min(s => s.data3);
-                var res = vs.FirstOrDefault(s=>s.data3==t);
-                var result = _db.GetIQueryable<Base_UserDecimal>().FirstOrDefault(r =>r.Id == res.Id);
+                var t = vs.Min(s => s.data3);
+                var res = vs.FirstOrDefault(s => s.data3 == t);
+                var result = _db.GetIQueryable<Base_UserDecimal>().FirstOrDefault(r => r.Id == res.Id);
                 result.data3 = result.data3 + 1;
 
 
@@ -410,13 +412,13 @@ namespace Coldairarrow.Api.Controllers
                         await webServise.webUser[UserDecimal.UserId].SendAsync(new ArraySegment<byte>(aa, 0, aa.Length), WebSocketMessageType.Text, true, CancellationToken.None);
                     }
                 }
-                    await _db.UpdateAsync(result);
+                await _db.UpdateAsync(result);
                 return
                      res;
 
-             
-                
-             
+
+
+
             }
 
 
@@ -435,20 +437,20 @@ namespace Coldairarrow.Api.Controllers
             {
 
                 var s = redis.GetDatabase(0);
-               var p= await s.HashDeleteAsync(remove.KefuId,remove.UserId);
+                var p = await s.HashDeleteAsync(remove.KefuId, remove.UserId);
                 Object res = new object();
                 if (p)
                 {
                     webServise.webUser.Remove(remove.UserId);
-                     res = new
+                    res = new
                     {
                         mag = "移除成功"
 
                     };
                 }
-                 res = new
+                res = new
                 {
-                     mag = "移除失败"
+                    mag = "移除失败"
 
                 };
 
@@ -466,32 +468,55 @@ namespace Coldairarrow.Api.Controllers
         /// <returns></returns>
         [HttpPost]
         [NoCheckJWT]
-        public async Task<List<MessageInfo>> GetMessage(Message message)
+        public async Task<List<messageInfosd>> GetMessage(Message message)
         {
-            var res = _db.GetIQueryable<MessageInfo>().Where(p => p.Id != null);
-            if (!string.IsNullOrWhiteSpace(message.ReceiveId) && !string.IsNullOrWhiteSpace(message.SendId))
+            var reult = await _db.GetIQueryable<Base_UserDecimal>().FirstOrDefaultAsync(s => s.Id == message.ReceiveId);
+            if (reult != null)
             {
-                res = res.Where(p => p.ReceiveId == message.ReceiveId && p.SendId == message.SendId || p.SendId == message.ReceiveId && p.ReceiveId == message.SendId);
+                var res = _db.GetIQueryable<MessageInfo>().Where(p => p.Id != null);
+                if (!string.IsNullOrWhiteSpace(message.ReceiveId) && !string.IsNullOrWhiteSpace(message.SendId))
+                {
+                    res = res.Where(p => p.ReceiveId == message.ReceiveId && p.SendId == message.SendId || p.SendId == message.ReceiveId && p.ReceiveId == message.SendId);
+                }
+
+                if (!string.IsNullOrWhiteSpace(message.Type))
+                {
+                    res = res.Where(p => p.Type == message.Type);
+                }
+                if (!string.IsNullOrWhiteSpace(message.Data1))
+                {
+                    res = res.Where(p => p.Data1 == p.Data1);
+                }
+                if (message.state != null)
+                {
+                    var t = await res.Where(p => p.state == message.state).Select(p => new messageInfosd
+                    {
+
+                        Id = p.Id,
+                        SendId = p.SendId,
+                        ReceiveId = p.ReceiveId,
+                        News = p.News,
+                        Data1 = p.Data1,
+                        Data2 = p.Data2,
+                        DTAE = p.DTAE,
+                        Type = p.Type,
+                        state = p.state,
+
+                        base_UserDecimals = reult,
+
+
+
+                    }).OrderByDescending(p => p.DTAE).Skip((message.PageIndex - 1) * message.PageRow)
+                       .Take(message.PageRow).ToListAsync();
+                    var ks = t.OrderBy(s => s.DTAE).ToList();
+                    return ks;
+                }
+
             }
 
-            if (!string.IsNullOrWhiteSpace(message.Type))
-            {
-                res = res.Where(p => p.Type == message.Type);
-            }
-            if (!string.IsNullOrWhiteSpace(message.Data1))
-            {
-                res = res.Where(p=>p.Data1==p.Data1);
-            }
-            if (message.state != null)
-            {
-                var t = await res.Where(p => p.state == message.state).OrderByDescending(p => p.DTAE).Skip((message.PageIndex - 1) * message.PageRow)
-                   .Take(message.PageRow).ToListAsync();
-                var ks = t.OrderBy(s => s.DTAE).ToList();
-                return ks;
-            }
+            List<messageInfosd> messageInfosds = new List<messageInfosd>();
 
-
-            return await res.ToListAsync();
+            return messageInfosds;
 
 
         }
@@ -505,33 +530,80 @@ namespace Coldairarrow.Api.Controllers
         /// <returns></returns>
         [HttpPost]
         [NoCheckJWT]
-        public async Task<List<MessageInfo>> GetUserMessage(Message message)
+        public async Task<List<messageInfosd>> GetUserMessage(Message message)
         {
 
-            var res = _db.GetIQueryable<MessageInfo>().Where(p => p.Id != null);
+
+            var sd = (from p in _db.GetIQueryable<MessageInfo>().AsExpandable()
+                      join tk in _db.GetIQueryable<Base_UserDecimal>() on p.ReceiveId equals tk.Id
+                      select new messageInfosd
+                      {
+                          Id = p.Id,
+                          SendId = p.SendId,
+                          ReceiveId = p.ReceiveId,
+                          News = p.News,
+                          Data1 = p.Data1,
+                          Data2 = p.Data2,
+                          DTAE = p.DTAE,
+                          Type = p.Type,
+                          state = p.state,
+                         // base_UserDecimals = from s in _db.GetIQueryable<Base_UserDecimal>().FirstOrDefault(t => t.Id == p.ReceiveId),
+                          Name = tk.Name,
+                          data4 = tk.data4,
+                          data3 = tk.data3,
+                          data2 = tk.data2,
+
+
+                      });
+
             if (!string.IsNullOrWhiteSpace(message.SendId))
             {
-                res = res.Where(p => p.SendId == message.SendId);
+                sd = sd.Where(p => p.SendId == message.SendId);
             }
 
             if (!string.IsNullOrWhiteSpace(message.Type))
             {
-                res = res.Where(p => p.Type == message.Type);
+                sd = sd.Where(p => p.Type == message.Type);
             }
             if (!string.IsNullOrWhiteSpace(message.Data1))
             {
-                res = res.Where(p => p.Data1 == p.Data1);
+                sd = sd.Where(p => p.Data1 == p.Data1);
             }
             if (message.state != null)
             {
-                var t = await res.Where(p => p.state == message.state).OrderByDescending(p => p.DTAE).Skip((message.PageIndex - 1) * message.PageRow)
-                   .Take(message.PageRow).ToListAsync();
-                var ks = t.OrderBy(s => s.DTAE).ToList();
-                return ks;
+                sd = sd.Where(p=>p.state==message.state).OrderByDescending(p => p.DTAE).Skip((message.PageIndex - 1) * message.PageRow).Take(message.PageRow);
             }
 
+            var sall = await sd.ToListAsync();
 
-            return await res.ToListAsync();
+
+            var ks = sd.OrderBy(s => s.DTAE).ToList();
+            return ks;
+
+            //var res = _db.GetIQueryable<MessageInfo>().Where(p => p.Id != null);
+            //if (!string.IsNullOrWhiteSpace(message.SendId))
+            //{
+            //    res = res.Where(p => p.SendId == message.SendId || p.ReceiveId == message.SendId);
+            //}
+
+            //if (!string.IsNullOrWhiteSpace(message.Type))
+            //{
+            //    res = res.Where(p => p.Type == message.Type);
+            //}
+            //if (!string.IsNullOrWhiteSpace(message.Data1))
+            //{
+            //    res = res.Where(p => p.Data1 == p.Data1);
+            //}
+            //if (message.state != null)
+            //{
+            //    var t = await res.Where(p => p.state == message.state).Include(s=>s.listuser).OrderByDescending(p => p.DTAE).Skip((message.PageIndex - 1) * message.PageRow)
+            //.Take(message.PageRow).ToListAsync();
+            //    var ks = t.OrderBy(s => s.DTAE).ToList();
+            //    return ks;
+            //}
+
+         //   List<MessageInfo> messages = new List<MessageInfo>();
+           // return messages;
         }
 
         /// <summary>
@@ -610,8 +682,8 @@ namespace Coldairarrow.Api.Controllers
         {
             try
             {
-               // result.CloseStatusDescription
-                 webServise.webUser[base_.Id].Abort();
+                // result.CloseStatusDescription
+                webServise.webUser[base_.Id].Abort();
                 webServise.webUser.Remove(base_.Id);
                 return JsonConvert.DeserializeObject("移除成功");
             }
@@ -636,16 +708,16 @@ namespace Coldairarrow.Api.Controllers
         {
             foreach (var item in vs)
             {
-                 var res =await  _db.GetIQueryable<MessageInfo>().AsNoTracking().FirstOrDefaultAsync(p=>p.Id==item);
-                  res.Data1 = "0";
+                var res = await _db.GetIQueryable<MessageInfo>().AsNoTracking().FirstOrDefaultAsync(p => p.Id == item);
+                res.Data1 = "0";
 
-                 int i=   await _db.UpdateAsync(res);
-                if (i>0)
+                int i = await _db.UpdateAsync(res);
+                if (i > 0)
                 {
                     var resd = new
                     {
-                        success=true,
-                        msg="更新成功"
+                        success = true,
+                        msg = "更新成功"
                     };
                     return resd.ToJson();
                 }
@@ -682,7 +754,7 @@ namespace Coldairarrow.Api.Controllers
         {
             webServise.webUser[base_.Id].Abort();
             webServise.webUser.Remove(base_.Id);
-            
+
         }
 
     }

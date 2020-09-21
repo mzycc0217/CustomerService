@@ -534,6 +534,11 @@
             Data2
             </summary>
         </member>
+        <member name="P:Coldairarrow.Entity.MessageInfo.listuser">
+            <summary>
+            人员
+            </summary>
+        </member>
         <member name="T:Coldairarrow.Entity.ServiceTel">
             <summary>
             ServiceTel

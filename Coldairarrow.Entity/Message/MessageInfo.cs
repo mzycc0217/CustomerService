@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -56,6 +57,9 @@ namespace Coldairarrow.Entity
         /// Data2
         /// </summary>
         public String Data2 { get; set; }
+     
+
+  
 
     }
 }

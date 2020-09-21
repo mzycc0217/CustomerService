@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Coldairarrow.IBusiness</name>
+    </assembly>
+    <members>
+        <member name="M:Coldairarrow.Business.IExpressionBusiness.GetAllListAsync(Coldairarrow.Entity.Expression)">
+            <summary>
+            获取所有表情
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Coldairarrow.IBusiness.IOperator">
+            <summary>
+            操作者
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.IBusiness.IOperator.UserId">
+            <summary>
+            当前操作者UserId
+            </summary>
+        </member>
+        <member name="M:Coldairarrow.IBusiness.IOperator.IsAdmin">
+            <summary>
+            判断是否为超级管理员
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.IBusiness.IOperator.WriteUserLog(Coldairarrow.Util.UserLogType,System.String)">
+            <summary>
+            记录操作日志
+            </summary>
+            <param name="userLogType">用户日志类型</param>
+            <param name="msg">内容</param>
+        </member>
+    </members>
+</doc>

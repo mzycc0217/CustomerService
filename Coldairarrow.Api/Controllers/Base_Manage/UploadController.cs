@@ -39,7 +39,7 @@ namespace Coldairarrow.Api.Controllers.Base_Manage
                 name = file.FileName,
                 status = "done",
                 thumbUrl = url,
-                url = url
+                url = path
             };
 
             return JsonContent(res.ToJson());
