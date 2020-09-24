@@ -135,6 +135,46 @@
             <param name="context"></param>
             <returns></returns>
         </member>
+        <member name="M:Coldairarrow.Api.websokcets.websMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            收发类
+            </summary>
+            <param name="context"></param>
+            <param name="webSocket"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.websokcets.websMiddleware.DetectionAsync">
+            <summary>
+            删除没有存活的检测
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.websokcets.websMiddleware.AddUser(Microsoft.AspNetCore.Http.HttpContext,System.Net.WebSockets.WebSocket)">
+            <summary>
+            添加人
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.websokcets.webServise.Echo(Microsoft.AspNetCore.Http.HttpContext,System.Net.WebSockets.WebSocket)">
+            <summary>
+            收发类
+            </summary>
+            <param name="context"></param>
+            <param name="webSocket"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.websokcets.webServise.DetectionAsync">
+            <summary>
+            删除没有存活的检测
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.websokcets.webServise.AddUser(Microsoft.AspNetCore.Http.HttpContext,System.Net.WebSockets.WebSocket)">
+            <summary>
+            添加人
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Coldairarrow.Api.BaseApiController">
             <summary>
             Mvc对外接口基控制器
@@ -488,25 +528,15 @@
             Data1
             </summary>
         </member>
-        <member name="M:Coldairarrow.Api.websokcets.webServise.Echo(Microsoft.AspNetCore.Http.HttpContext,System.Net.WebSockets.WebSocket)">
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.base_UserDecimals">
             <summary>
-            收发类
+            接收者
             </summary>
-            <param name="context"></param>
-            <param name="webSocket"></param>
-            <returns></returns>
         </member>
-        <member name="M:Coldairarrow.Api.websokcets.webServise.DetectionAsync">
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.UserDecimal">
             <summary>
-            删除没有存活的检测
+            发送者
             </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Coldairarrow.Api.websokcets.webServise.AddUser(Microsoft.AspNetCore.Http.HttpContext,System.Net.WebSockets.WebSocket)">
-            <summary>
-            添加人
-            </summary>
-            <returns></returns>
         </member>
     </members>
 </doc>

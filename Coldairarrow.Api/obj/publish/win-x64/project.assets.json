@@ -14141,23 +14141,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\冬天捡到的徒弟xin\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\TEMP.LENOVO-PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\桌面\\test\\CustomerService\\Coldairarrow.Api\\05.Coldairarrow.Api.csproj",
+      "projectUniqueName": "D:\\webservise\\CustomerService\\Coldairarrow.Api\\05.Coldairarrow.Api.csproj",
       "projectName": "Coldairarrow.Api",
-      "projectPath": "D:\\桌面\\test\\CustomerService\\Coldairarrow.Api\\05.Coldairarrow.Api.csproj",
-      "packagesPath": "C:\\Users\\冬天捡到的徒弟xin\\.nuget\\packages\\",
-      "outputPath": "D:\\桌面\\test\\CustomerService\\Coldairarrow.Api\\obj\\publish\\win-x64\\",
+      "projectPath": "D:\\webservise\\CustomerService\\Coldairarrow.Api\\05.Coldairarrow.Api.csproj",
+      "packagesPath": "C:\\Users\\TEMP.LENOVO-PC\\.nuget\\packages\\",
+      "outputPath": "D:\\webservise\\CustomerService\\Coldairarrow.Api\\obj\\publish\\win-x64\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\冬天捡到的徒弟xin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\TEMP.LENOVO-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -14170,14 +14166,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\桌面\\test\\CustomerService\\Coldairarrow.Business\\04.Coldairarrow.Business.csproj": {
-              "projectPath": "D:\\桌面\\test\\CustomerService\\Coldairarrow.Business\\04.Coldairarrow.Business.csproj"
+            "D:\\webservise\\CustomerService\\Coldairarrow.Business\\04.Coldairarrow.Business.csproj": {
+              "projectPath": "D:\\webservise\\CustomerService\\Coldairarrow.Business\\04.Coldairarrow.Business.csproj"
             },
-            "D:\\桌面\\test\\CustomerService\\Coldairarrow.Entity\\02.Coldairarrow.Entity.csproj": {
-              "projectPath": "D:\\桌面\\test\\CustomerService\\Coldairarrow.Entity\\02.Coldairarrow.Entity.csproj"
+            "D:\\webservise\\CustomerService\\Coldairarrow.Entity\\02.Coldairarrow.Entity.csproj": {
+              "projectPath": "D:\\webservise\\CustomerService\\Coldairarrow.Entity\\02.Coldairarrow.Entity.csproj"
             },
-            "D:\\桌面\\test\\CustomerService\\Coldairarrow.Util\\01.Coldairarrow.Util.csproj": {
-              "projectPath": "D:\\桌面\\test\\CustomerService\\Coldairarrow.Util\\01.Coldairarrow.Util.csproj"
+            "D:\\webservise\\CustomerService\\Coldairarrow.Util\\01.Coldairarrow.Util.csproj": {
+              "projectPath": "D:\\webservise\\CustomerService\\Coldairarrow.Util\\01.Coldairarrow.Util.csproj"
             }
           }
         }
@@ -14217,15 +14213,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[3.1.1, 3.1.1]"
+            "version": "[3.1.8, 3.1.8]"
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[3.1.1, 3.1.1]"
+            "version": "[3.1.8, 3.1.8]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[3.1.1, 3.1.1]"
+            "version": "[3.1.8, 3.1.8]"
           }
         ],
         "frameworkReferences": {
@@ -14236,7 +14232,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

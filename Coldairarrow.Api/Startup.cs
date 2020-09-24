@@ -24,7 +24,7 @@ namespace Coldairarrow.Api
         }
        // public webServise _webServise { get; }
         public IConfiguration Configuration { get; }
-        webServise servise = new webServise();
+       // webServise servise = new webServise();
         public void ConfigureServices(IServiceCollection services)
         {
            // services.AddSingleton<webServise>();
@@ -78,33 +78,37 @@ namespace Coldairarrow.Api
 
             app.UseWebSockets(webSocketOptions);
 
-            app.Use(async (context, next) =>
-            {
-                if (context.Request.Path == "/ws")
-                {
-                    if (context.WebSockets.IsWebSocketRequest)
-                    {
-                        WebSocket webSocket = await context.WebSockets.AcceptWebSocketAsync();
-                        await servise.Echo(context, webSocket);
-                    }
-                    else
-                    {
-                        context.Response.StatusCode = 400;
-                    }
-                }
-                else
-                {
-                    await next();
-                }
+            //app.UseMiddleware<websMiddleware>();
+            //app.Use(async (context, next) =>
+            //{
+            //    if (context.Request.Path == "/ws")
+            //    {
+            //        if (context.WebSockets.IsWebSocketRequest)
+            //        {
+            //            WebSocket webSocket = await context.WebSockets.AcceptWebSocketAsync();
+            //            await servise.Echo(context, webSocket);
+            //        }
+            //        else
+            //        {
+            //            context.Response.StatusCode = 400;
+            //        }
+            //    }
+            //    else
+            //    {
+            //        await next();
+            //    }
 
-            });
+            //});
+
             //允许body重用
             app.Use(next => context =>
             {
                 context.Request.EnableBuffering();
                 return next(context);
             })
+           .UseMiddleware<websMiddleware>()
             .UseMiddleware<CorsMiddleware>()//跨域
+           // .UseMiddleware<websMiddleware>()
             .UseDeveloperExceptionPage()
             .UseStaticFiles(new StaticFileOptions
             {

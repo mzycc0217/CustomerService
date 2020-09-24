@@ -9318,11 +9318,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TEMP.LENOVO-PC\\Documents\\Tencent Files\\2474910956\\FileRecv\\CustomerService\\Coldairarrow.Console\\06.Coldairarrow.Console.csproj",
+      "projectUniqueName": "D:\\webservise\\CustomerService\\Coldairarrow.Console\\06.Coldairarrow.Console.csproj",
       "projectName": "Coldairarrow.Console",
-      "projectPath": "C:\\Users\\TEMP.LENOVO-PC\\Documents\\Tencent Files\\2474910956\\FileRecv\\CustomerService\\Coldairarrow.Console\\06.Coldairarrow.Console.csproj",
+      "projectPath": "D:\\webservise\\CustomerService\\Coldairarrow.Console\\06.Coldairarrow.Console.csproj",
       "packagesPath": "C:\\Users\\TEMP.LENOVO-PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TEMP.LENOVO-PC\\Documents\\Tencent Files\\2474910956\\FileRecv\\CustomerService\\Coldairarrow.Console\\obj\\",
+      "outputPath": "D:\\webservise\\CustomerService\\Coldairarrow.Console\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\TEMP.LENOVO-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9338,11 +9338,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\TEMP.LENOVO-PC\\Documents\\Tencent Files\\2474910956\\FileRecv\\CustomerService\\Coldairarrow.Business\\04.Coldairarrow.Business.csproj": {
-              "projectPath": "C:\\Users\\TEMP.LENOVO-PC\\Documents\\Tencent Files\\2474910956\\FileRecv\\CustomerService\\Coldairarrow.Business\\04.Coldairarrow.Business.csproj"
+            "D:\\webservise\\CustomerService\\Coldairarrow.Business\\04.Coldairarrow.Business.csproj": {
+              "projectPath": "D:\\webservise\\CustomerService\\Coldairarrow.Business\\04.Coldairarrow.Business.csproj"
             },
-            "C:\\Users\\TEMP.LENOVO-PC\\Documents\\Tencent Files\\2474910956\\FileRecv\\CustomerService\\Coldairarrow.Util\\01.Coldairarrow.Util.csproj": {
-              "projectPath": "C:\\Users\\TEMP.LENOVO-PC\\Documents\\Tencent Files\\2474910956\\FileRecv\\CustomerService\\Coldairarrow.Util\\01.Coldairarrow.Util.csproj"
+            "D:\\webservise\\CustomerService\\Coldairarrow.Util\\01.Coldairarrow.Util.csproj": {
+              "projectPath": "D:\\webservise\\CustomerService\\Coldairarrow.Util\\01.Coldairarrow.Util.csproj"
             }
           }
         }

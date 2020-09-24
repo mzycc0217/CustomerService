@@ -1,0 +1,46 @@
+2020-09-22 09:46:45.817 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-22 09:46:46.361 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-22 09:46:46.371 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-22 09:46:46.377 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-22 09:46:46.382 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webservise\CustomerService\Coldairarrow.Api
+2020-09-22 09:46:46.386 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-22 09:47:53.624 +08:00 [ERR Microsoft.AspNetCore.Server.Kestrel] Connection id "0HM2UJ5ESO7M7", Request id "0HM2UJ5ESO7M7:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Unable to resolve service for type 'System.Net.WebSockets.WebSocket' while attempting to Invoke middleware 'Coldairarrow.Api.websokcets.websMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_1.<UseMiddleware>b__2(HttpContext context)
+   at Coldairarrow.Api.Startup.<>c__DisplayClass5_0.<Configure>b__2(HttpContext context) in D:\webservise\CustomerService\Coldairarrow.Api\Startup.cs:line 107
+   at Microsoft.AspNetCore.WebSockets.WebSocketMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Hosting.HostingApplication.ProcessRequestAsync(Context context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2020-09-22 09:48:01.257 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-22 09:48:01.721 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-22 09:48:01.726 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-22 09:48:01.728 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-22 09:48:01.732 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webservise\CustomerService\Coldairarrow.Api
+2020-09-22 09:48:01.735 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-22 09:48:55.380 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-22 09:48:55.922 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-22 09:48:55.928 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-22 09:48:55.933 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-22 09:48:55.937 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webservise\CustomerService\Coldairarrow.Api
+2020-09-22 09:48:55.941 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-22 09:56:19.174 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-22 09:56:19.584 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-22 09:56:19.589 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-22 09:56:19.592 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-22 09:56:19.595 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webservise\CustomerService\Coldairarrow.Api
+2020-09-22 09:56:19.598 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-22 09:56:43.830 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-22 09:56:44.278 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-22 09:56:44.283 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-22 09:56:44.286 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-22 09:56:44.290 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webservise\CustomerService\Coldairarrow.Api
+2020-09-22 09:56:44.293 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-22 09:59:38.690 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-22 09:59:39.073 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-22 09:59:39.078 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-22 09:59:39.082 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-22 09:59:39.086 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webservise\CustomerService\Coldairarrow.Api
+2020-09-22 09:59:39.090 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started

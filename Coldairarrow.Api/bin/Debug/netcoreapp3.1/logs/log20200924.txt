@@ -1,0 +1,588 @@
+2020-09-24 16:24:12.404 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-24 16:24:17.887 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-24 16:24:18.097 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-24 16:24:18.106 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-24 16:24:18.115 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webservise\CustomerService\Coldairarrow.Api
+2020-09-24 16:24:18.121 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-24 16:26:36.204 +08:00 [ERR Microsoft.EntityFrameworkCore.Database.Connection] An error occurred using the connection to database 'ImmeDiately' on server '.'.
+2020-09-24 16:26:37.159 +08:00 [ERR Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'EFCore.Sharding.GenericDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): 系统找不到指定的文件。
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): 系统找不到指定的文件。
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2020-09-24 16:26:37.797 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetUserMessage
+Time:20132ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"string","SendId":"1307874536187760641","News":"string","DTAE":"string","Data1":"","Data2":true,"Type":"","state":0,"states":0,"Kefu":"string","PageIndex":1,"PageRow":10}
+
+Response:
+
+2020-09-24 16:26:37.813 +08:00 [ERR Coldairarrow.Api.GlobalExceptionFilter] 
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): 系统找不到指定的文件。
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnectionAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Coldairarrow.Api.Controllers.MessageInfoController.GetUserMessage(Message message)
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2020-09-24 16:27:56.905 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-24 16:27:57.623 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-24 16:27:57.649 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-24 16:27:57.652 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-24 16:27:57.655 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webservise\CustomerService\Coldairarrow.Api
+2020-09-24 16:27:57.659 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-24 16:28:46.900 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (211ms) [Parameters=[@__message_SendId_0='?' (Size = 4000), @__message_state_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[SendId], [m].[ReceiveId], [m].[News], [m].[Data1], [m].[Data2], [m].[DTAE], [m].[Type], [m].[state], [b].[Name], [b].[data4], [b].[data3], [b].[data2], [t0].[Id], [t0].[CreateTime], [t0].[CreatorId], [t0].[Deleted], [t0].[Name], [t0].[Openid], [t0].[UserId], [t0].[data1], [t0].[data2], [t0].[data3], [t0].[data4], [t2].[Id], [t2].[CreateTime], [t2].[CreatorId], [t2].[Deleted], [t2].[Name], [t2].[Openid], [t2].[UserId], [t2].[data1], [t2].[data2], [t2].[data3], [t2].[data4]
+FROM [MessageInfo] AS [m]
+INNER JOIN [Base_UserDecimal] AS [b] ON [m].[ReceiveId] = [b].[Id]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[CreateTime], [t].[CreatorId], [t].[Deleted], [t].[Name], [t].[Openid], [t].[UserId], [t].[data1], [t].[data2], [t].[data3], [t].[data4]
+    FROM (
+        SELECT [b0].[Id], [b0].[CreateTime], [b0].[CreatorId], [b0].[Deleted], [b0].[Name], [b0].[Openid], [b0].[UserId], [b0].[data1], [b0].[data2], [b0].[data3], [b0].[data4], ROW_NUMBER() OVER(PARTITION BY [b0].[Id] ORDER BY [b0].[Id]) AS [row]
+        FROM [Base_UserDecimal] AS [b0]
+    ) AS [t]
+    WHERE [t].[row] <= 1
+) AS [t0] ON [m].[SendId] = [t0].[Id]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[CreateTime], [t1].[CreatorId], [t1].[Deleted], [t1].[Name], [t1].[Openid], [t1].[UserId], [t1].[data1], [t1].[data2], [t1].[data3], [t1].[data4]
+    FROM (
+        SELECT [b1].[Id], [b1].[CreateTime], [b1].[CreatorId], [b1].[Deleted], [b1].[Name], [b1].[Openid], [b1].[UserId], [b1].[data1], [b1].[data2], [b1].[data3], [b1].[data4], ROW_NUMBER() OVER(PARTITION BY [b1].[Id] ORDER BY [b1].[Id]) AS [row]
+        FROM [Base_UserDecimal] AS [b1]
+    ) AS [t1]
+    WHERE [t1].[row] <= 1
+) AS [t2] ON [m].[ReceiveId] = [t2].[Id]
+WHERE ([m].[SendId] = @__message_SendId_0) AND ([m].[state] = @__message_state_1)
+ORDER BY [m].[DTAE] DESC
+OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+2020-09-24 16:28:47.574 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetUserMessage
+Time:3034ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"string","SendId":"1307874536187760641","News":"string","DTAE":"string","Data1":"","Data2":true,"Type":"","state":0,"states":0,"Kefu":"string","PageIndex":1,"PageRow":10}
+
+Response:
+
+2020-09-24 16:28:47.584 +08:00 [ERR Coldairarrow.Api.GlobalExceptionFilter] 
+System.InvalidOperationException: The LINQ expression 'DbSet<MessageInfo>
+    .Join(
+        outer: DbSet<Base_UserDecimal>, 
+        inner: m => m.ReceiveId, 
+        outerKeySelector: b => b.Id, 
+        innerKeySelector: (m, b) => new TransparentIdentifier<MessageInfo, Base_UserDecimal>(
+            Outer = m, 
+            Inner = b
+        ))
+    .Where(ti => ti.Outer.SendId == __message_SendId_0)
+    .Where(ti => ti.Outer.state == __message_state_1)
+    .OrderByDescending(ti => ti.Outer.DTAE)
+    .Select(ti => new messageInfosd{ 
+        Id = ti.Outer.Id, 
+        SendId = ti.Outer.SendId, 
+        ReceiveId = ti.Outer.ReceiveId, 
+        News = ti.Outer.News, 
+        Data1 = ti.Outer.Data1, 
+        Data2 = ti.Outer.Data2, 
+        DTAE = ti.Outer.DTAE, 
+        Type = ti.Outer.Type, 
+        state = ti.Outer.state, 
+        Name = ti.Inner.Name, 
+        data4 = ti.Inner.data4, 
+        data3 = ti.Inner.data3, 
+        data2 = ti.Inner.data2, 
+        UserDecimal = DbSet<Base_UserDecimal>
+            .Where(b0 => b0.Id == ti.Outer.SendId)
+            .SingleOrDefault(), 
+        base_UserDecimals = DbSet<Base_UserDecimal>
+            .Where(b1 => b1.Id == ti.Outer.ReceiveId)
+            .SingleOrDefault() 
+    }
+    )
+    .Skip(__p_2)
+    .Take(__p_3)
+    .OrderBy(e0 => e0.DTAE)' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to either AsEnumerable(), AsAsyncEnumerable(), ToList(), or ToListAsync(). See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.<VisitMethodCall>g__CheckTranslated|8_0(ShapedQueryExpression translated, <>c__DisplayClass8_0& )
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass9_0`1.<Execute>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQueryCore[TFunc](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetEnumerator()
+   at LinqKit.ExpandableQuery`1.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Coldairarrow.Api.Controllers.MessageInfoController.GetUserMessage(Message message) in D:\webservise\CustomerService\Coldairarrow.Api\Controllers\Message\MessageInfoController.cs:line 583
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-09-24 16:31:36.774 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-24 16:31:39.091 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-24 16:31:39.099 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-24 16:31:39.103 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-24 16:31:39.106 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webservise\CustomerService\Coldairarrow.Api
+2020-09-24 16:31:39.110 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-24 16:33:15.321 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (155ms) [Parameters=[@__message_SendId_0='?' (Size = 4000), @__message_state_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[SendId], [m].[ReceiveId], [m].[News], [m].[Data1], [m].[Data2], [m].[DTAE], [m].[Type], [m].[state], [t0].[Id], [t0].[CreateTime], [t0].[CreatorId], [t0].[Deleted], [t0].[Name], [t0].[Openid], [t0].[UserId], [t0].[data1], [t0].[data2], [t0].[data3], [t0].[data4], [t2].[Id], [t2].[CreateTime], [t2].[CreatorId], [t2].[Deleted], [t2].[Name], [t2].[Openid], [t2].[UserId], [t2].[data1], [t2].[data2], [t2].[data3], [t2].[data4]
+FROM [MessageInfo] AS [m]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[CreateTime], [t].[CreatorId], [t].[Deleted], [t].[Name], [t].[Openid], [t].[UserId], [t].[data1], [t].[data2], [t].[data3], [t].[data4]
+    FROM (
+        SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4], ROW_NUMBER() OVER(PARTITION BY [b].[Id] ORDER BY [b].[Id]) AS [row]
+        FROM [Base_UserDecimal] AS [b]
+    ) AS [t]
+    WHERE [t].[row] <= 1
+) AS [t0] ON [m].[SendId] = [t0].[Id]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[CreateTime], [t1].[CreatorId], [t1].[Deleted], [t1].[Name], [t1].[Openid], [t1].[UserId], [t1].[data1], [t1].[data2], [t1].[data3], [t1].[data4]
+    FROM (
+        SELECT [b0].[Id], [b0].[CreateTime], [b0].[CreatorId], [b0].[Deleted], [b0].[Name], [b0].[Openid], [b0].[UserId], [b0].[data1], [b0].[data2], [b0].[data3], [b0].[data4], ROW_NUMBER() OVER(PARTITION BY [b0].[Id] ORDER BY [b0].[Id]) AS [row]
+        FROM [Base_UserDecimal] AS [b0]
+    ) AS [t1]
+    WHERE [t1].[row] <= 1
+) AS [t2] ON [m].[ReceiveId] = [t2].[Id]
+WHERE ([m].[SendId] = @__message_SendId_0) AND ([m].[state] = @__message_state_1)
+ORDER BY [m].[DTAE] DESC
+OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+2020-09-24 16:33:15.750 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetUserMessage
+Time:2229ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"string","SendId":"1307874536187760641","News":"string","DTAE":"string","Data1":"","Data2":true,"Type":"","state":0,"states":0,"Kefu":"string","PageIndex":1,"PageRow":10}
+
+Response:
+
+2020-09-24 16:33:15.762 +08:00 [ERR Coldairarrow.Api.GlobalExceptionFilter] 
+System.InvalidOperationException: The LINQ expression 'DbSet<MessageInfo>
+    .Where(m => m.Id != null)
+    .Where(m => m.SendId == __message_SendId_0)
+    .Where(m => m.state == __message_state_1)
+    .OrderByDescending(m => m.DTAE)
+    .Select(m => new messageInfosd{ 
+        Id = m.Id, 
+        SendId = m.SendId, 
+        ReceiveId = m.ReceiveId, 
+        News = m.News, 
+        Data1 = m.Data1, 
+        Data2 = m.Data2, 
+        DTAE = m.DTAE, 
+        Type = m.Type, 
+        state = m.state, 
+        UserDecimal = DbSet<Base_UserDecimal>
+            .Where(b => b.Id == m.SendId)
+            .SingleOrDefault(), 
+        base_UserDecimals = DbSet<Base_UserDecimal>
+            .Where(b0 => b0.Id == m.ReceiveId)
+            .SingleOrDefault() 
+    }
+    )
+    .Skip(__p_2)
+    .Take(__p_3)
+    .OrderBy(e0 => e0.DTAE)' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to either AsEnumerable(), AsAsyncEnumerable(), ToList(), or ToListAsync(). See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.<VisitMethodCall>g__CheckTranslated|8_0(ShapedQueryExpression translated, <>c__DisplayClass8_0& )
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass9_0`1.<Execute>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQueryCore[TFunc](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Coldairarrow.Api.Controllers.MessageInfoController.GetUserMessage(Message message) in D:\webservise\CustomerService\Coldairarrow.Api\Controllers\Message\MessageInfoController.cs:line 580
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-09-24 16:33:48.375 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (72ms) [Parameters=[@__message_SendId_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[SendId], [m].[ReceiveId], [m].[News], [m].[Data1], [m].[Data2], [m].[DTAE], [m].[Type], [m].[state], [t0].[Id], [t0].[CreateTime], [t0].[CreatorId], [t0].[Deleted], [t0].[Name], [t0].[Openid], [t0].[UserId], [t0].[data1], [t0].[data2], [t0].[data3], [t0].[data4], [t2].[Id], [t2].[CreateTime], [t2].[CreatorId], [t2].[Deleted], [t2].[Name], [t2].[Openid], [t2].[UserId], [t2].[data1], [t2].[data2], [t2].[data3], [t2].[data4]
+FROM [MessageInfo] AS [m]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[CreateTime], [t].[CreatorId], [t].[Deleted], [t].[Name], [t].[Openid], [t].[UserId], [t].[data1], [t].[data2], [t].[data3], [t].[data4]
+    FROM (
+        SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4], ROW_NUMBER() OVER(PARTITION BY [b].[Id] ORDER BY [b].[Id]) AS [row]
+        FROM [Base_UserDecimal] AS [b]
+    ) AS [t]
+    WHERE [t].[row] <= 1
+) AS [t0] ON [m].[SendId] = [t0].[Id]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[CreateTime], [t1].[CreatorId], [t1].[Deleted], [t1].[Name], [t1].[Openid], [t1].[UserId], [t1].[data1], [t1].[data2], [t1].[data3], [t1].[data4]
+    FROM (
+        SELECT [b0].[Id], [b0].[CreateTime], [b0].[CreatorId], [b0].[Deleted], [b0].[Name], [b0].[Openid], [b0].[UserId], [b0].[data1], [b0].[data2], [b0].[data3], [b0].[data4], ROW_NUMBER() OVER(PARTITION BY [b0].[Id] ORDER BY [b0].[Id]) AS [row]
+        FROM [Base_UserDecimal] AS [b0]
+    ) AS [t1]
+    WHERE [t1].[row] <= 1
+) AS [t2] ON [m].[ReceiveId] = [t2].[Id]
+WHERE [m].[SendId] = @__message_SendId_0
+2020-09-24 16:33:54.650 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (110ms) [Parameters=[@__message_SendId_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[SendId], [m].[ReceiveId], [m].[News], [m].[Data1], [m].[Data2], [m].[DTAE], [m].[Type], [m].[state], [t0].[Id], [t0].[CreateTime], [t0].[CreatorId], [t0].[Deleted], [t0].[Name], [t0].[Openid], [t0].[UserId], [t0].[data1], [t0].[data2], [t0].[data3], [t0].[data4], [t2].[Id], [t2].[CreateTime], [t2].[CreatorId], [t2].[Deleted], [t2].[Name], [t2].[Openid], [t2].[UserId], [t2].[data1], [t2].[data2], [t2].[data3], [t2].[data4]
+FROM [MessageInfo] AS [m]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[CreateTime], [t].[CreatorId], [t].[Deleted], [t].[Name], [t].[Openid], [t].[UserId], [t].[data1], [t].[data2], [t].[data3], [t].[data4]
+    FROM (
+        SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4], ROW_NUMBER() OVER(PARTITION BY [b].[Id] ORDER BY [b].[Id]) AS [row]
+        FROM [Base_UserDecimal] AS [b]
+    ) AS [t]
+    WHERE [t].[row] <= 1
+) AS [t0] ON [m].[SendId] = [t0].[Id]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[CreateTime], [t1].[CreatorId], [t1].[Deleted], [t1].[Name], [t1].[Openid], [t1].[UserId], [t1].[data1], [t1].[data2], [t1].[data3], [t1].[data4]
+    FROM (
+        SELECT [b0].[Id], [b0].[CreateTime], [b0].[CreatorId], [b0].[Deleted], [b0].[Name], [b0].[Openid], [b0].[UserId], [b0].[data1], [b0].[data2], [b0].[data3], [b0].[data4], ROW_NUMBER() OVER(PARTITION BY [b0].[Id] ORDER BY [b0].[Id]) AS [row]
+        FROM [Base_UserDecimal] AS [b0]
+    ) AS [t1]
+    WHERE [t1].[row] <= 1
+) AS [t2] ON [m].[ReceiveId] = [t2].[Id]
+WHERE [m].[SendId] = @__message_SendId_0
+2020-09-24 16:34:06.984 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (44ms) [Parameters=[@__message_SendId_0='?' (Size = 4000), @__message_state_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[SendId], [m].[ReceiveId], [m].[News], [m].[Data1], [m].[Data2], [m].[DTAE], [m].[Type], [m].[state], [t0].[Id], [t0].[CreateTime], [t0].[CreatorId], [t0].[Deleted], [t0].[Name], [t0].[Openid], [t0].[UserId], [t0].[data1], [t0].[data2], [t0].[data3], [t0].[data4], [t2].[Id], [t2].[CreateTime], [t2].[CreatorId], [t2].[Deleted], [t2].[Name], [t2].[Openid], [t2].[UserId], [t2].[data1], [t2].[data2], [t2].[data3], [t2].[data4]
+FROM [MessageInfo] AS [m]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[CreateTime], [t].[CreatorId], [t].[Deleted], [t].[Name], [t].[Openid], [t].[UserId], [t].[data1], [t].[data2], [t].[data3], [t].[data4]
+    FROM (
+        SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4], ROW_NUMBER() OVER(PARTITION BY [b].[Id] ORDER BY [b].[Id]) AS [row]
+        FROM [Base_UserDecimal] AS [b]
+    ) AS [t]
+    WHERE [t].[row] <= 1
+) AS [t0] ON [m].[SendId] = [t0].[Id]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[CreateTime], [t1].[CreatorId], [t1].[Deleted], [t1].[Name], [t1].[Openid], [t1].[UserId], [t1].[data1], [t1].[data2], [t1].[data3], [t1].[data4]
+    FROM (
+        SELECT [b0].[Id], [b0].[CreateTime], [b0].[CreatorId], [b0].[Deleted], [b0].[Name], [b0].[Openid], [b0].[UserId], [b0].[data1], [b0].[data2], [b0].[data3], [b0].[data4], ROW_NUMBER() OVER(PARTITION BY [b0].[Id] ORDER BY [b0].[Id]) AS [row]
+        FROM [Base_UserDecimal] AS [b0]
+    ) AS [t1]
+    WHERE [t1].[row] <= 1
+) AS [t2] ON [m].[ReceiveId] = [t2].[Id]
+WHERE ([m].[SendId] = @__message_SendId_0) AND ([m].[state] = @__message_state_1)
+ORDER BY [m].[DTAE] DESC
+OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+2020-09-24 16:34:08.616 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetUserMessage
+Time:33911ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"string","SendId":"1307874536187760641","News":"string","DTAE":"string","Data1":"","Data2":true,"Type":"","state":0,"states":0,"Kefu":"string","PageIndex":1,"PageRow":10}
+
+Response:
+
+2020-09-24 16:34:08.622 +08:00 [ERR Coldairarrow.Api.GlobalExceptionFilter] 
+System.InvalidOperationException: The LINQ expression 'DbSet<MessageInfo>
+    .Where(m => m.Id != null)
+    .Where(m => m.SendId == __message_SendId_0)
+    .Where(m => m.state == __message_state_1)
+    .OrderByDescending(m => m.DTAE)
+    .Select(m => new messageInfosd{ 
+        Id = m.Id, 
+        SendId = m.SendId, 
+        ReceiveId = m.ReceiveId, 
+        News = m.News, 
+        Data1 = m.Data1, 
+        Data2 = m.Data2, 
+        DTAE = m.DTAE, 
+        Type = m.Type, 
+        state = m.state, 
+        UserDecimal = DbSet<Base_UserDecimal>
+            .Where(b => b.Id == m.SendId)
+            .SingleOrDefault(), 
+        base_UserDecimals = DbSet<Base_UserDecimal>
+            .Where(b0 => b0.Id == m.ReceiveId)
+            .SingleOrDefault() 
+    }
+    )
+    .Skip(__p_2)
+    .Take(__p_3)
+    .OrderBy(e0 => e0.DTAE)' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to either AsEnumerable(), AsAsyncEnumerable(), ToList(), or ToListAsync(). See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.<VisitMethodCall>g__CheckTranslated|8_0(ShapedQueryExpression translated, <>c__DisplayClass8_0& )
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass9_0`1.<Execute>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQueryCore[TFunc](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Coldairarrow.Api.Controllers.MessageInfoController.GetUserMessage(Message message) in D:\webservise\CustomerService\Coldairarrow.Api\Controllers\Message\MessageInfoController.cs:line 580
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2020-09-24 16:35:34.189 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (73ms) [Parameters=[@__message_ReceiveId_0='?' (Size = 4000), @__message_SendId_1='?' (Size = 4000), @__message_state_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32), @__p_4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[SendId], [m].[ReceiveId], [m].[News], [m].[Data1], [m].[Data2], [m].[DTAE], [m].[Type], [m].[state], [t0].[Id], [t0].[CreateTime], [t0].[CreatorId], [t0].[Deleted], [t0].[Name], [t0].[Openid], [t0].[UserId], [t0].[data1], [t0].[data2], [t0].[data3], [t0].[data4], [t2].[Id], [t2].[CreateTime], [t2].[CreatorId], [t2].[Deleted], [t2].[Name], [t2].[Openid], [t2].[UserId], [t2].[data1], [t2].[data2], [t2].[data3], [t2].[data4]
+FROM [MessageInfo] AS [m]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[CreateTime], [t].[CreatorId], [t].[Deleted], [t].[Name], [t].[Openid], [t].[UserId], [t].[data1], [t].[data2], [t].[data3], [t].[data4]
+    FROM (
+        SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4], ROW_NUMBER() OVER(PARTITION BY [b].[Id] ORDER BY [b].[Id]) AS [row]
+        FROM [Base_UserDecimal] AS [b]
+    ) AS [t]
+    WHERE [t].[row] <= 1
+) AS [t0] ON [m].[SendId] = [t0].[Id]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[CreateTime], [t1].[CreatorId], [t1].[Deleted], [t1].[Name], [t1].[Openid], [t1].[UserId], [t1].[data1], [t1].[data2], [t1].[data3], [t1].[data4]
+    FROM (
+        SELECT [b0].[Id], [b0].[CreateTime], [b0].[CreatorId], [b0].[Deleted], [b0].[Name], [b0].[Openid], [b0].[UserId], [b0].[data1], [b0].[data2], [b0].[data3], [b0].[data4], ROW_NUMBER() OVER(PARTITION BY [b0].[Id] ORDER BY [b0].[Id]) AS [row]
+        FROM [Base_UserDecimal] AS [b0]
+    ) AS [t1]
+    WHERE [t1].[row] <= 1
+) AS [t2] ON [m].[ReceiveId] = [t2].[Id]
+WHERE ((([m].[ReceiveId] = @__message_ReceiveId_0) AND ([m].[SendId] = @__message_SendId_1)) OR (([m].[SendId] = @__message_ReceiveId_0) AND ([m].[ReceiveId] = @__message_SendId_1))) AND ([m].[state] = @__message_state_2)
+ORDER BY [m].[DTAE] DESC
+OFFSET @__p_3 ROWS FETCH NEXT @__p_4 ROWS ONLY
+2020-09-24 16:35:42.053 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetMessage
+Time:24143ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1307874536187760641","SendId":"1307874536187760641","News":"string","DTAE":"string","Data1":"","Data2":true,"Type":"","state":0,"states":0,"Kefu":"string","PageIndex":1,"PageRow":10}
+
+Response:{"Data":[],"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-24 16:47:46.978 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting starting
+2020-09-24 16:47:48.446 +08:00 [INF Microsoft.Hosting.Lifetime] Now listening on: http://[::]:5000
+2020-09-24 16:47:48.476 +08:00 [INF Microsoft.Hosting.Lifetime] Application started. Press Ctrl+C to shut down.
+2020-09-24 16:47:48.479 +08:00 [INF Microsoft.Hosting.Lifetime] Hosting environment: Development
+2020-09-24 16:47:48.483 +08:00 [INF Microsoft.Hosting.Lifetime] Content root path: D:\webservise\CustomerService\Coldairarrow.Api
+2020-09-24 16:47:48.487 +08:00 [DBG Microsoft.Extensions.Hosting.Internal.Host] Hosting started
+2020-09-24 16:49:34.256 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (1,047ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-24 16:49:35.146 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (320ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-24 16:49:35.431 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:4029ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306422215759106048","SendId":"1307874536187760640","News":"string","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-24 16:49:43.926 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (55ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-24 16:49:44.000 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (34ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-24 16:49:44.043 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:188ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306422215759106048","SendId":"1307874536187760640","News":"asda飒飒的","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-24 16:49:54.694 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (33ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-24 16:49:54.769 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (33ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-24 16:49:54.817 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:158ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1306422215759106048","SendId":"1307874536187760640","News":"啊发声法撒是否","DTAE":"string","Data1":"string","Data2":true,"Type":"string","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-24 16:50:28.834 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (39ms) [Parameters=[@__message_SendId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4]
+FROM [Base_UserDecimal] AS [b]
+WHERE [b].[Id] = @__message_SendId_0
+2020-09-24 16:50:29.192 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (312ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [MessageInfo] ([Id], [DTAE], [Data1], [Data2], [News], [ReceiveId], [SendId], [Type], [state])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2020-09-24 16:50:29.231 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/SendMessage
+Time:445ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1307874536187760640","SendId":"1306422215759106048","News":"啊发声法撒是否","DTAE":"string","Data1":"string","Data2":true,"Type":"1307874536187760640","state":0,"states":0,"Kefu":"string","PageIndex":0,"PageRow":0}
+
+Response:{"Success":true,"ErrorCode":0,"Msg":"请求成功！"}
+
+2020-09-24 16:51:44.736 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (634ms) [Parameters=[@__message_ReceiveId_0='?' (Size = 4000), @__message_SendId_1='?' (Size = 4000), @__message_state_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32), @__p_4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[SendId], [m].[ReceiveId], [m].[News], [m].[Data1], [m].[Data2], [m].[DTAE], [m].[Type], [m].[state], [t0].[Id], [t0].[CreateTime], [t0].[CreatorId], [t0].[Deleted], [t0].[Name], [t0].[Openid], [t0].[UserId], [t0].[data1], [t0].[data2], [t0].[data3], [t0].[data4], [t2].[Id], [t2].[CreateTime], [t2].[CreatorId], [t2].[Deleted], [t2].[Name], [t2].[Openid], [t2].[UserId], [t2].[data1], [t2].[data2], [t2].[data3], [t2].[data4]
+FROM [MessageInfo] AS [m]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[CreateTime], [t].[CreatorId], [t].[Deleted], [t].[Name], [t].[Openid], [t].[UserId], [t].[data1], [t].[data2], [t].[data3], [t].[data4]
+    FROM (
+        SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4], ROW_NUMBER() OVER(PARTITION BY [b].[Id] ORDER BY [b].[Id]) AS [row]
+        FROM [Base_UserDecimal] AS [b]
+    ) AS [t]
+    WHERE [t].[row] <= 1
+) AS [t0] ON [m].[SendId] = [t0].[Id]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[CreateTime], [t1].[CreatorId], [t1].[Deleted], [t1].[Name], [t1].[Openid], [t1].[UserId], [t1].[data1], [t1].[data2], [t1].[data3], [t1].[data4]
+    FROM (
+        SELECT [b0].[Id], [b0].[CreateTime], [b0].[CreatorId], [b0].[Deleted], [b0].[Name], [b0].[Openid], [b0].[UserId], [b0].[data1], [b0].[data2], [b0].[data3], [b0].[data4], ROW_NUMBER() OVER(PARTITION BY [b0].[Id] ORDER BY [b0].[Id]) AS [row]
+        FROM [Base_UserDecimal] AS [b0]
+    ) AS [t1]
+    WHERE [t1].[row] <= 1
+) AS [t2] ON [m].[ReceiveId] = [t2].[Id]
+WHERE ((([m].[ReceiveId] = @__message_ReceiveId_0) AND ([m].[SendId] = @__message_SendId_1)) OR (([m].[SendId] = @__message_ReceiveId_0) AND ([m].[ReceiveId] = @__message_SendId_1))) AND ([m].[state] = @__message_state_2)
+ORDER BY [m].[DTAE] DESC
+OFFSET @__p_3 ROWS FETCH NEXT @__p_4 ROWS ONLY
+2020-09-24 16:51:44.764 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetMessage
+Time:5502ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"1307874536187760640","SendId":"1306422215759106048","News":"string","DTAE":"string","Data1":"","Data2":true,"Type":"","state":0,"states":0,"Kefu":"string","PageIndex":1,"PageRow":10}
+
+Response:{"Data":[{"Id":"1309052331089727488","SendId":"1307874536187760640","ReceiveId":"1306422215759106048","News":"string","Type":"string","DTAE":"2020-09-24 16:49:31.407","state":0,"Data1":"0","Data2":null,"Name":null,"data4":null,"data3":0,"data2":null,"base_UserDecimals":{"Id":"1306422215759106048","CreateTime":"2020-09-17 10:38:23.047","CreatorId":null,"Deleted":false,"UserId":null,"Name":"雪","Openid":"oMYKR4hY7NY-I2cZvZzCF9ODhg6M","data1":null,"data2":"3","data3":87,"data4":"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI732yMt3JgXiaBwU45gPLMF2qIGtBa9SkbfEgpoFT4wich0BQHjAwtBGNJXuKfTGQMEjwkDWQL4XIw/132"},"UserDecimal":{"Id":"1307874536187760640","CreateTime":"2020-09-21 10:49:23.220","CreatorId":null,"Deleted":false,"UserId":null,"Name":"Agoni Scorpio","Openid":"oMYKR4gJzqHAc2UwGbpGaEuL7YP8","data1":null,"data2":"2","data3":0,"data4":"https://thirdwx.qlogo.cn/mmopen/vi_32/tgMO48fTbgZhPicATMbb7xtRr0XYyG5dib8LTHQE2KSW9xEFKB2QicCCeG4JIE7yX8nWtzLkvWxflpUNP5nTFsKIA/132"}},{"Id":"1309052383......
+
+2020-09-24 16:52:57.084 +08:00 [INF Microsoft.EntityFrameworkCore.Database.Command] Executed DbCommand (60ms) [Parameters=[@__message_SendId_0='?' (Size = 4000), @__message_state_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[SendId], [m].[ReceiveId], [m].[News], [m].[Data1], [m].[Data2], [m].[DTAE], [m].[Type], [m].[state], [t0].[Id], [t0].[CreateTime], [t0].[CreatorId], [t0].[Deleted], [t0].[Name], [t0].[Openid], [t0].[UserId], [t0].[data1], [t0].[data2], [t0].[data3], [t0].[data4], [t2].[Id], [t2].[CreateTime], [t2].[CreatorId], [t2].[Deleted], [t2].[Name], [t2].[Openid], [t2].[UserId], [t2].[data1], [t2].[data2], [t2].[data3], [t2].[data4]
+FROM [MessageInfo] AS [m]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[CreateTime], [t].[CreatorId], [t].[Deleted], [t].[Name], [t].[Openid], [t].[UserId], [t].[data1], [t].[data2], [t].[data3], [t].[data4]
+    FROM (
+        SELECT [b].[Id], [b].[CreateTime], [b].[CreatorId], [b].[Deleted], [b].[Name], [b].[Openid], [b].[UserId], [b].[data1], [b].[data2], [b].[data3], [b].[data4], ROW_NUMBER() OVER(PARTITION BY [b].[Id] ORDER BY [b].[Id]) AS [row]
+        FROM [Base_UserDecimal] AS [b]
+    ) AS [t]
+    WHERE [t].[row] <= 1
+) AS [t0] ON [m].[SendId] = [t0].[Id]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[CreateTime], [t1].[CreatorId], [t1].[Deleted], [t1].[Name], [t1].[Openid], [t1].[UserId], [t1].[data1], [t1].[data2], [t1].[data3], [t1].[data4]
+    FROM (
+        SELECT [b0].[Id], [b0].[CreateTime], [b0].[CreatorId], [b0].[Deleted], [b0].[Name], [b0].[Openid], [b0].[UserId], [b0].[data1], [b0].[data2], [b0].[data3], [b0].[data4], ROW_NUMBER() OVER(PARTITION BY [b0].[Id] ORDER BY [b0].[Id]) AS [row]
+        FROM [Base_UserDecimal] AS [b0]
+    ) AS [t1]
+    WHERE [t1].[row] <= 1
+) AS [t2] ON [m].[ReceiveId] = [t2].[Id]
+WHERE (([m].[SendId] = @__message_SendId_0) OR ([m].[ReceiveId] = @__message_SendId_0)) AND ([m].[state] = @__message_state_1)
+ORDER BY [m].[DTAE] DESC
+OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+2020-09-24 16:52:57.092 +08:00 [INF Coldairarrow.Api.ApiLogAttribute] 方向:请求本系统
+Url:/Message/MessageInfo/GetUserMessage
+Time:96ms
+Method:POST
+ContentType:application/json
+Body:{"Id":"string","ReceiveId":"string","SendId":"1307874536187760640","News":"string","DTAE":"string","Data1":"","Data2":true,"Type":"","state":0,"states":0,"Kefu":"string","PageIndex":1,"PageRow":10}
+
+Response:{"Data":[{"Id":"1309052331089727488","SendId":"1307874536187760640","ReceiveId":"1306422215759106048","News":"string","Type":"string","DTAE":"2020-09-24 16:49:31.407","state":0,"Data1":"0","Data2":null,"Name":null,"data4":null,"data3":0,"data2":null,"base_UserDecimals":{"Id":"1306422215759106048","CreateTime":"2020-09-17 10:38:23.047","CreatorId":null,"Deleted":false,"UserId":null,"Name":"雪","Openid":"oMYKR4hY7NY-I2cZvZzCF9ODhg6M","data1":null,"data2":"3","data3":87,"data4":"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI732yMt3JgXiaBwU45gPLMF2qIGtBa9SkbfEgpoFT4wich0BQHjAwtBGNJXuKfTGQMEjwkDWQL4XIw/132"},"UserDecimal":{"Id":"1307874536187760640","CreateTime":"2020-09-21 10:49:23.220","CreatorId":null,"Deleted":false,"UserId":null,"Name":"Agoni Scorpio","Openid":"oMYKR4gJzqHAc2UwGbpGaEuL7YP8","data1":null,"data2":"2","data3":0,"data4":"https://thirdwx.qlogo.cn/mmopen/vi_32/tgMO48fTbgZhPicATMbb7xtRr0XYyG5dib8LTHQE2KSW9xEFKB2QicCCeG4JIE7yX8nWtzLkvWxflpUNP5nTFsKIA/132"}},{"Id":"1309052383......
+

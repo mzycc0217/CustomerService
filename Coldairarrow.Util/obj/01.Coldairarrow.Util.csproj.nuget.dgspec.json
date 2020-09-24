@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TEMP.LENOVO-PC\\Documents\\Tencent Files\\2474910956\\FileRecv\\CustomerService\\Coldairarrow.Util\\01.Coldairarrow.Util.csproj": {}
+    "D:\\webservise\\CustomerService\\Coldairarrow.Util\\01.Coldairarrow.Util.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TEMP.LENOVO-PC\\Documents\\Tencent Files\\2474910956\\FileRecv\\CustomerService\\Coldairarrow.Util\\01.Coldairarrow.Util.csproj": {
+    "D:\\webservise\\CustomerService\\Coldairarrow.Util\\01.Coldairarrow.Util.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TEMP.LENOVO-PC\\Documents\\Tencent Files\\2474910956\\FileRecv\\CustomerService\\Coldairarrow.Util\\01.Coldairarrow.Util.csproj",
+        "projectUniqueName": "D:\\webservise\\CustomerService\\Coldairarrow.Util\\01.Coldairarrow.Util.csproj",
         "projectName": "Coldairarrow.Util",
-        "projectPath": "C:\\Users\\TEMP.LENOVO-PC\\Documents\\Tencent Files\\2474910956\\FileRecv\\CustomerService\\Coldairarrow.Util\\01.Coldairarrow.Util.csproj",
+        "projectPath": "D:\\webservise\\CustomerService\\Coldairarrow.Util\\01.Coldairarrow.Util.csproj",
         "packagesPath": "C:\\Users\\TEMP.LENOVO-PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TEMP.LENOVO-PC\\Documents\\Tencent Files\\2474910956\\FileRecv\\CustomerService\\Coldairarrow.Util\\obj\\",
+        "outputPath": "D:\\webservise\\CustomerService\\Coldairarrow.Util\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TEMP.LENOVO-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",

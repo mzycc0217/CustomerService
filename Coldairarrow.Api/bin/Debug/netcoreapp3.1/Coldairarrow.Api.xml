@@ -135,6 +135,46 @@
             <param name="context"></param>
             <returns></returns>
         </member>
+        <member name="M:Coldairarrow.Api.websokcets.websMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            收发类
+            </summary>
+            <param name="context"></param>
+            <param name="webSocket"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.websokcets.websMiddleware.DetectionAsync">
+            <summary>
+            删除没有存活的检测
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.websokcets.websMiddleware.AddUser(Microsoft.AspNetCore.Http.HttpContext,System.Net.WebSockets.WebSocket)">
+            <summary>
+            添加人
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.websokcets.webServise.Echo(Microsoft.AspNetCore.Http.HttpContext,System.Net.WebSockets.WebSocket)">
+            <summary>
+            收发类
+            </summary>
+            <param name="context"></param>
+            <param name="webSocket"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.websokcets.webServise.DetectionAsync">
+            <summary>
+            删除没有存活的检测
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coldairarrow.Api.websokcets.webServise.AddUser(Microsoft.AspNetCore.Http.HttpContext,System.Net.WebSockets.WebSocket)">
+            <summary>
+            添加人
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Coldairarrow.Api.BaseApiController">
             <summary>
             Mvc对外接口基控制器
@@ -428,25 +468,75 @@
             页码
             </summary>
         </member>
-        <member name="M:Coldairarrow.Api.websokcets.webServise.Echo(Microsoft.AspNetCore.Http.HttpContext,System.Net.WebSockets.WebSocket)">
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.SendId">
             <summary>
-            收发类
+            发送者Id
             </summary>
-            <param name="context"></param>
-            <param name="webSocket"></param>
-            <returns></returns>
         </member>
-        <member name="M:Coldairarrow.Api.websokcets.webServise.DetectionAsync">
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.ReceiveId">
             <summary>
-            删除没有存活的检测
+            接收者Id
             </summary>
-            <returns></returns>
         </member>
-        <member name="M:Coldairarrow.Api.websokcets.webServise.AddUser(Microsoft.AspNetCore.Http.HttpContext,System.Net.WebSockets.WebSocket)">
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.News">
             <summary>
-            添加人
+            发送消息
             </summary>
-            <returns></returns>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.DTAE">
+            <summary>
+            DTAE
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.state">
+            <summary>
+            state
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.Data1">
+            <summary>
+            Data1
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.Data2">
+            <summary>
+            Data2
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.Name">
+            <summary>
+            Data1
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.data4">
+            <summary>
+            Data1
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.data3">
+            <summary>
+            Data1
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.data2">
+            <summary>
+            Data1
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.base_UserDecimals">
+            <summary>
+            接收者
+            </summary>
+        </member>
+        <member name="P:Coldairarrow.Api.Dto.messageInfosd.UserDecimal">
+            <summary>
+            发送者
+            </summary>
         </member>
     </members>
 </doc>

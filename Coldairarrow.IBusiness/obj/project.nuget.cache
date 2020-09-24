@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fzesi/dejyBw84TRNGE531yB0XOolxST32iQL7biUT1wt7mYsA1TFd7A1VP3rPm32xQQmEG+VWUlBsdEwGoaBw==",
+  "dgSpecHash": "eW6kr8MAlfGIncgchISU6l8hK3s2KP042UvfDL0Bn/D5AEfms4PhHHvXZqtcod5m/E0HFd9S6xybaBbm8L5HEQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TEMP.LENOVO-PC\\Documents\\Tencent Files\\2474910956\\FileRecv\\CustomerService\\Coldairarrow.IBusiness\\03.Coldairarrow.IBusiness.csproj",
+  "projectFilePath": "D:\\webservise\\CustomerService\\Coldairarrow.IBusiness\\03.Coldairarrow.IBusiness.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TEMP.LENOVO-PC\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\TEMP.LENOVO-PC\\.nuget\\packages\\caching.csredis\\3.6.5\\caching.csredis.3.6.5.nupkg.sha512",

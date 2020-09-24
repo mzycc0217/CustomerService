@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KBZqpwQMc0jUK5Qz21/zl1/kscNICEUnlkTM+owiolXylBZwMQOaTw54vBZSJa0ivGXwcR5aHwGt57pNd6N0hA==",
+  "dgSpecHash": "Qw81pXZHRpHR+Nf0z/pnK3Xq3egMq9tId3djhxIUgZbNAxBs1H3P43/Apn+UT4Hf2Dn9k8B5NzckydL5WTl59A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\TEMP.LENOVO-PC\\Documents\\Tencent Files\\2474910956\\FileRecv\\CustomerService\\Coldairarrow.UnitTests\\10.Coldairarrow.UnitTests.csproj",
+  "projectFilePath": "D:\\webservise\\CustomerService\\Coldairarrow.UnitTests\\10.Coldairarrow.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TEMP.LENOVO-PC\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\TEMP.LENOVO-PC\\.nuget\\packages\\caching.csredis\\3.6.5\\caching.csredis.3.6.5.nupkg.sha512",

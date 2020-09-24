@@ -119,7 +119,17 @@ namespace Coldairarrow.Api.Dto
         /// </summary>
         public String data2 { get; set; }
 
-        public  Base_UserDecimal base_UserDecimals { get; set; }
+        /// <summary>
+        /// 接收者
+        /// </summary>
+        public Base_UserDecimal base_UserDecimals { get; set; }
+
+
+
+        /// <summary>
+        /// 发送者
+        /// </summary>
+        public Base_UserDecimal UserDecimal { get; set; }
 
     }
 }
